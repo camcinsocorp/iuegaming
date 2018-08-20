@@ -1,0 +1,7 @@
+{
+  "name": "iuegaming",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
