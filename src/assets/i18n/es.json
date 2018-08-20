@@ -1,4 +1,27 @@
 {
+
+  "tutorial": {
+    "first": {
+      "title": "ACREDITACIÓN IUE",
+      "subtitle": "Un compromiso de todos"
+    },
+    "second": {
+      "title": "",
+      "subtitle": ""
+    }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
   "NAME": "Nombre",
   "PASSWORD": "Contraseña",
   "EMAIL": "Email",
@@ -45,4 +68,5 @@
   "CARDS_TITLE": "Social",
 
   "SEARCH_TITLE": "Buscar"
+
 }
