@@ -3,6 +3,7 @@ import { IonicPage, MenuController, NavController, Platform } from 'ionic-angula
 
 import { TranslateService } from '@ngx-translate/core';
 
+
 export interface Slide {
   title: string;
   description: string;
@@ -20,11 +21,11 @@ export class TutorialPage {
   dir: string = 'ltr';
 
 
-  tutorialStrings: string [];
+  tutorialStrings: string [] = [];
 
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public platform: Platform) {
     
-    this.dir = platform.dir();
+
     this.fillText(translate);
     this.slides = [
       {
@@ -33,12 +34,18 @@ export class TutorialPage {
         image: 'assets/accreditation/images/logo.png',
       },
       {
-        title: "",
-        description: "",
+        title: "values.TUTORIAL_SLIDE2_TITLE",
+        description: "values.TUTORIAL_SLIDE2_DESCRIPTION",
         image: 'assets/accreditation/images/she.png',
       },
+      {
+        title: "",
+        description: "values.TUTORIAL_SLIDE3_DESCRIPTIO",
+        image: 'assets/img/ica-slidebox-img-3.png',
+      }
     ];
-
+    this.dir = platform.dir();
+   
   }
 
   startApp() {
@@ -72,6 +79,7 @@ export class TutorialPage {
 
     this.tutorialStrings[0] = translate.instant("" + tutorial + "." + first + "." + title);
     this.tutorialStrings[1] = translate.instant("" + tutorial + "." + first + "." + subtitle);
+
   }
 
 }

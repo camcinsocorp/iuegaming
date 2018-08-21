@@ -12,6 +12,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
+import { IuebannerPage } from '../pages/iuebanner/iuebanner';
+import { IuebannerPageModule } from '../pages/iuebanner/iuebanner.module';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -36,11 +38,12 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    IuebannerPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -53,7 +56,8 @@ export function provideSettings(storage: Storage) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    IuebannerPage
   ],
   providers: [
     Api,
