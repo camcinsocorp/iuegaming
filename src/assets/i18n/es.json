@@ -6,14 +6,24 @@
       "subtitle": "Un compromiso de todos"
     },
     "second": {
-      "title": "",
-      "subtitle": ""
+      "title": "RETO DIARIO",
+      "subtitle": "Todos los días encontraras un reto para cumplir y avanzar"
+    },
+    "third": {
+      "title": "TOP 10",
+      "subtitle": "Alcanza el TOP 10 y recobe recompensas en la IUE"
     }
   },
 
 
 
 
+
+  "welcome": {
+    "title": "Vamos a aprender más sobre la acreditación",
+    "btn-login": "INICIAR SESIÓN",
+    "btn-signup": "REGISTRARME"
+  },
 
 
 
