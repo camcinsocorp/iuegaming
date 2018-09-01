@@ -19,10 +19,23 @@
 
 
 
+
   "welcome": {
     "title": "Vamos a aprender más sobre la acreditación",
     "btn-login": "INICIAR SESIÓN",
     "btn-signup": "REGISTRARME"
+  },
+
+  "signup": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "character": {
+      "gender": "Seleccione el genero del personaje",
+      "boy": "Chico",
+      "girl": "Chica"
+    },
+    "button": "Registrarme"
   },
 
 
