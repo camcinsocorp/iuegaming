@@ -27,6 +27,7 @@
   },
 
   "signup": {
+    "title": "Registro",
     "name": "Nombre",
     "email": "Correo electrónico",
     "password": "Contraseña",
@@ -35,7 +36,7 @@
       "boy": "Chico",
       "girl": "Chica"
     },
-    "button": "Registrarme"
+    "button": "REGISTRARME"
   },
 
 
