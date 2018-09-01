@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ signup.title' | translate }}</ion-title>
+    <ion-title>{{ 'signup.title' | translate }}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -30,18 +30,22 @@
 
 
       <ion-row>
-        <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
-          <ion-item>
-            <ion-label>{{ 'signup.character.boy' | translate }}</ion-label>
-            <ion-radio value="boy"></ion-radio>
-          </ion-item>
-        </ion-col>
-        <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
-          <ion-item>
-            <ion-label>{{ 'signup.character.girl' | translate }}</ion-label>
-            <ion-radio value="girl"></ion-radio>
-          </ion-item>
-        </ion-col>
+        <form (submit)="doSubmit($event)" [formGroup]="langForm">
+          <ion-list radio-group formControlName="langs">
+            <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
+              <ion-item>
+                <ion-label>{{ 'signup.character.boy' | translate }}</ion-label>
+                <ion-radio value="boy"></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
+              <ion-item>
+                <ion-label>{{ 'signup.character.girl' | translate }}</ion-label>
+                <ion-radio value="girl"></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-list>
+        </form>
       </ion-row>
 
 
