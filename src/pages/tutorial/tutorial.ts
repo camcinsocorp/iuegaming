@@ -31,17 +31,17 @@ export class TutorialPage {
       {
         title: this.tutorialStrings[0],
         description: this.tutorialStrings[1],
-        image: 'assets/accreditation/images/logo.png',
+        image: 'assets/img/accreditation/images/logo.png',
       },
       {
         title: this.tutorialStrings[2],
         description: this.tutorialStrings[3],
-        image: 'assets/accreditation/images/logo.png',
+        image: 'assets/img/accreditation/images/logoiue.png',
       },
       {
         title: this.tutorialStrings[4],
         description: this.tutorialStrings[5],
-        image: 'assets/accreditation/images/logo.png',
+        image: 'assets/img/accreditation/images/logo.png',
       },
     ];
     this.dir = platform.dir();
