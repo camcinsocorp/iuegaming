@@ -1,4 +1,20 @@
 {
+
+    "tutorial": {
+      "first": {
+        "title": "ACREDITACIÓN IUE",
+        "subtitle": "Un compromiso de todos"
+      },
+      "second": {
+        "title": "",
+        "subtitle": ""
+      }
+    },
+
+
+
+
+
   "BACK_BUTTON_TEXT": "Back",
 
   "NAME": "Name",

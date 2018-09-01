@@ -3,6 +3,7 @@ import { IonicPage, MenuController, NavController, Platform } from 'ionic-angula
 
 import { TranslateService } from '@ngx-translate/core';
 
+
 export interface Slide {
   title: string;
   description: string;
@@ -19,35 +20,32 @@ export class TutorialPage {
   showSkip = true;
   dir: string = 'ltr';
 
+
+  tutorialStrings: string [] = [];
+
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public platform: Platform) {
+    
+
+    this.fillText(translate);
+    this.slides = [
+      {
+        title: this.tutorialStrings[0],
+        description: this.tutorialStrings[1],
+        image: 'assets/accreditation/images/logo.png',
+      },
+      {
+        title: this.tutorialStrings[2],
+        description: this.tutorialStrings[3],
+        image: 'assets/accreditation/images/logo.png',
+      },
+      {
+        title: this.tutorialStrings[4],
+        description: this.tutorialStrings[5],
+        image: 'assets/accreditation/images/logo.png',
+      },
+    ];
     this.dir = platform.dir();
-    translate.get(["TUTORIAL_SLIDE1_TITLE",
-      "TUTORIAL_SLIDE1_DESCRIPTION",
-      "TUTORIAL_SLIDE2_TITLE",
-      "TUTORIAL_SLIDE2_DESCRIPTION",
-      "TUTORIAL_SLIDE3_TITLE",
-      "TUTORIAL_SLIDE3_DESCRIPTION",
-    ]).subscribe(
-      (values) => {
-        console.log('Loaded values', values);
-        this.slides = [
-          {
-            title: values.TUTORIAL_SLIDE1_TITLE,
-            description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-1.png',
-          },
-          {
-            title: values.TUTORIAL_SLIDE2_TITLE,
-            description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
-          },
-          {
-            title: values.TUTORIAL_SLIDE3_TITLE,
-            description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-3.png',
-          }
-        ];
-      });
+   
   }
 
   startApp() {
@@ -69,6 +67,32 @@ export class TutorialPage {
   ionViewWillLeave() {
     // enable the root left menu when leaving the tutorial page
     this.menu.enable(true);
+  }
+
+
+
+  fillText(translate: TranslateService) {
+    var tutorial: string = "tutorial";
+    var first: string = "first";
+    var second: string = "second";
+    var third: string = "third";
+
+    var title: string = "title";
+    var subtitle: string = "subtitle";
+
+    //First
+    this.tutorialStrings[0] = translate.instant("" + tutorial + "." + first + "." + title);
+    this.tutorialStrings[1] = translate.instant("" + tutorial + "." + first + "." + subtitle);
+
+    //Second
+    this.tutorialStrings[2] = translate.instant("" + tutorial + "." + second + "." + subtitle);
+    this.tutorialStrings[3] = translate.instant("" + tutorial + "." + second + "." + subtitle);
+
+    //Third
+    this.tutorialStrings[4] = translate.instant("" + tutorial + "." + third + "." + subtitle);
+    this.tutorialStrings[5] = translate.instant("" + tutorial + "." + third + "." + subtitle);
+
+
   }
 
 }
