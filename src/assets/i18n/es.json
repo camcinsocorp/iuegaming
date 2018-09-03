@@ -40,6 +40,20 @@
   },
 
 
+  "login": {
+    "title": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "button": "INICIAR SESIÓN"
+  },
+
+
+  "start": {
+    "title": "Bienvenid@",
+    "daily": "Juego diario",
+    "tap": "Jasdasd"
+  },
+
 
 
 
