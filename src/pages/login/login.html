@@ -8,13 +8,20 @@
 
 
 <ion-content>
+  <div class="div-content">
   <form (submit)="doLogin()">
     <ion-list>
-
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <div>
       <ion-item>
-        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-label floating>{{ 'EMAIL' | translate }}</ion-label>
         <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
+    </div>
+    </ion-col>
+    </ion-row>
 
       <!--
       Want to use a Username instead of an Email? Here you go:
@@ -24,16 +31,50 @@
         <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
       </ion-item>
       -->
-
+      <ion-row>
+        <ion-col col-12>
       <ion-item>
-        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-label floating>{{ 'PASSWORD' | translate }}</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
+    </ion-col>
+    </ion-row>
 
-      <div padding>
+    <ion-row>
+      <ion-col col-7>
+        <div>
+          <ion-item>
+              <ion-label text-wrap>{{ 'RECORDAR' | translate }}</ion-label>
+              <ion-checkbox></ion-checkbox>
+          </ion-item>
+        </div>
+      </ion-col>
+
+      <ion-col col-5>
+        <div>
+          <ion-item  class="label">
+          <a>Olvide mi clave</a>
+        </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+      <div padding class="button-div-content">
         <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
       </div>
-
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="centrar-label">
+        <ion-label>{{ 'CUENTA' | translate }} <a>{{ 'CREA' | translate }}</a></ion-label>
+      </div>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
     </ion-list>
   </form>
+</div>
 </ion-content>

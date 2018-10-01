@@ -2,16 +2,15 @@
 
   "tutorial": {
     "first": {
-      "title": "ACREDITACIÓN IUE",
-      "subtitle": "Un compromiso de todos"
+      "title": "",
+      "subtitle": ""
     },
     "second": {
-      "title": "RETO DIARIO",
-      "subtitle": "Todos los días encontraras un reto para cumplir y avanzar"
+      "subtitle": "Bienvenidos a un ambiente de integración y aprendizaje entre todos los integrantes de la IUE"
     },
     "third": {
       "title": "TOP 10",
-      "subtitle": "Alcanza el TOP 10 y recobe recompensas en la IUE"
+      "subtitle": "Lugar donde compartirás, competiras, recibirás recompensas y, sobre todo, aprenderas lo mas necesario para alcanzar una meta comun"
     }
   },
 
@@ -21,7 +20,7 @@
 
 
   "welcome": {
-    "title": "Vamos a aprender más sobre la acreditación",
+    "title": "Inicia sesión o registrate para divertirte y aprender con el proceso de acreditación IUE",
     "btn-login": "INICIAR SESIÓN",
     "btn-signup": "REGISTRARME"
   },
@@ -48,9 +47,12 @@
 
   "NAME": "Nombre",
   "PASSWORD": "Contraseña",
-  "EMAIL": "Email",
+  "EMAIL": "Numero de cedula",
   "LOGIN": "Iniciar sesión",
   "SIGNUP": "Registrarse",
+  "RECORDAR": "Recordarme",
+  "CUENTA": "¿No tienes cuenta?",
+  "CREA": "Crea una",
 
   "TAB1_TITLE": "Items",
   "TAB2_TITLE": "Buscar",

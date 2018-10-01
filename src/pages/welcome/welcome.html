@@ -1,8 +1,9 @@
+
 <ion-content scroll="false">
   <ion-grid padding>
     <ion-row>
       <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
-        <img class="welcome-accreditation-logo" src="assets/accreditation/images/logoiue.png">
+        <img class="welcome-accreditation-logo" src="assets/img/accreditation/images/iue8.svg">
       </ion-col>
     </ion-row>
     <ion-row>
@@ -11,13 +12,11 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-col col-6 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+            <button ion-button block (click)="login()" class="login">{{ 'welcome.btn-login' | translate }}</button>
+          </ion-col>
+      <ion-col col-6 col-sm-9 col-md-6 col-lg-4 col-xl-3>
         <button ion-button block (click)="signup()">{{ 'welcome.btn-signup' | translate }}</button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
-        <button ion-button block (click)="login()" class="login">{{ 'welcome.btn-login' | translate }}</button>
       </ion-col>
     </ion-row>
   </ion-grid>
