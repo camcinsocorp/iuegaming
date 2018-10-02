@@ -32,6 +32,10 @@ export class LoginPage {
     })
   }
 
+  Recover() {
+    this.navCtrl.push('RecoverPage');
+  }
+
   // Attempt to login in through our User service
   doLogin() {
     this.user.login(this.account).subscribe((resp) => {

@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ signup.title' | translate }}</ion-title>
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,32 +16,38 @@
       <ion-row>
         <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
           <ion-item>
-            <ion-label floating>{{ 'signup.name' | translate }}</ion-label>
-            <ion-input type="email"></ion-input>
+            <ion-label floating>{{ 'signup.documentNumber' | translate }}</ion-label>
+            <ion-input type="number"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
+
       <ion-row>
         <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
-          <ion-title text-wrap>{{ 'signup.character.gender' | translate }}</ion-title>
+          <ion-item>
+            <ion-label floating>{{ 'signup.name' | translate }}</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
         </ion-col>
       </ion-row>
 
-
-
       <ion-row>
-        <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
-          <ion-item>
-            <ion-label>{{ 'signup.character.boy' | translate }}</ion-label>
-            <ion-radio value="boy"></ion-radio>
-          </ion-item>
-        </ion-col>
-        <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
-          <ion-item>
-            <ion-label>{{ 'signup.character.girl' | translate }}</ion-label>
-            <ion-radio value="girl"></ion-radio>
-          </ion-item>
-        </ion-col>
+          <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
+            <ion-item>
+              <ion-label floating>{{ 'signup.character.gender' | translate }}</ion-label>
+              <ion-select>
+                <ion-option value="f">{{ 'signup.character.girl' | translate }}</ion-option>
+                <ion-option value="m">{{ 'signup.character.boy' | translate }}</ion-option>
+                <ion-option value="o">{{ 'signup.character.other' | translate }}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
+            <ion-item>
+              <ion-label floating>{{ 'signup.Nickname' | translate }}</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-col>
       </ion-row>
 
 
@@ -57,7 +63,25 @@
         <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
           <ion-item>
             <ion-label floating>{{ 'signup.password' | translate }}</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+          <ion-item>
+            <ion-label floating>{{ 'signup.confipassword' | translate }}</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+          <ion-item>
+            <ion-label text-wrap>{{ 'signup.I_Agree' | translate }} <a>{{ 'signup.terms' | translate }}</a></ion-label>
+            <ion-checkbox></ion-checkbox>
           </ion-item>
         </ion-col>
       </ion-row>

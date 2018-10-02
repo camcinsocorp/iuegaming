@@ -58,6 +58,8 @@
 
   "WELCOME_TITLE": "Welcome",
 
+  "RECOVER_PASSWORD": "Recuperar contraseña",
+
   "LOGIN_TITLE": "Sign in",
   "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again.",
   "LOGIN_BUTTON": "Sign in",

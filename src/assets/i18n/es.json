@@ -26,15 +26,20 @@
   },
 
   "signup": {
-    "title": "Registro",
+    "documentNumber": "Numero de cedula",
     "name": "Nombre",
     "email": "Correo electrónico",
     "password": "Contraseña",
+    "confipassword":"Confirmar contraseña",
     "character": {
-      "gender": "Seleccione el genero del personaje",
-      "boy": "Chico",
-      "girl": "Chica"
+      "gender": "Genero",
+      "boy": "Masculino",
+      "girl": "Femenino",
+      "other": "Otro"
     },
+    "Nickname": "Nickname (Apodo)",
+    "I_Agree": "Acepto los",
+    "terms": "teminos y condiciones",
     "button": "REGISTRARME"
   },
 
@@ -48,11 +53,16 @@
   "NAME": "Nombre",
   "PASSWORD": "Contraseña",
   "EMAIL": "Numero de cedula",
+  "EMAIL2": "Correo electronico",
   "LOGIN": "Iniciar sesión",
   "SIGNUP": "Registrarse",
   "RECORDAR": "Recordarme",
   "CUENTA": "¿No tienes cuenta?",
   "CREA": "Crea una",
+  "CODE": "Código de recuperación",
+  "ACCEPT":"Aceptar",
+
+  "RECOVER_PASSWORD": "Recuperar contraseña",
 
   "TAB1_TITLE": "Items",
   "TAB2_TITLE": "Buscar",
@@ -82,7 +92,7 @@
   "LOGIN_TITLE": "Iniciar sesión",
   "LOGIN_ERROR": "No se ha podido iniciar sesión. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
   "LOGIN_BUTTON": "Iniciar sesión",
-  "SIGNUP_TITLE": "Registro",
+  "SIGNUP_TITLE": "Registrarme",
   "SIGNUP_ERROR": "No se ha podido crear la cuenta. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
   "SIGNUP_BUTTON": "Registrarse",
 
