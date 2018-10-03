@@ -52,6 +52,9 @@
 
   "NAME": "Nombre",
   "PASSWORD": "Contraseña",
+  "NEW_PASSWORD": "Nueva contraseña",
+  "CONFIR_NEW_PASSWORD": "Confirmar contraseña nueva",
+  "UPDATE_PASSWORD":"Actualizar contraseña",
   "EMAIL": "Numero de cedula",
   "EMAIL2": "Correo electronico",
   "LOGIN": "Iniciar sesión",
@@ -60,7 +63,9 @@
   "CUENTA": "¿No tienes cuenta?",
   "CREA": "Crea una",
   "CODE": "Código de recuperación",
-  "ACCEPT":"Aceptar",
+  "ACCEPT":"Listo",
+  "CODE_VALID": "El codigo ingresado es valido, ahora puede restablecer tu contraseña",
+  "R_PASSWORD":"RESTABLECER CONTRASEÑA",
 
   "RECOVER_PASSWORD": "Recuperar contraseña",
 
@@ -95,6 +100,7 @@
   "SIGNUP_TITLE": "Registrarme",
   "SIGNUP_ERROR": "No se ha podido crear la cuenta. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
   "SIGNUP_BUTTON": "Registrarse",
+  "RECOVER_BUTTON": "Recuperar contraseña",
 
   "LIST_MASTER_TITLE": "Items",
 

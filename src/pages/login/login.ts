@@ -4,6 +4,7 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { User } from '../../providers';
 import { MainPage } from '../';
+import { InicioPage } from '../inicio/inicio';
 
 @IonicPage()
 @Component({
@@ -34,6 +35,10 @@ export class LoginPage {
 
   Recover() {
     this.navCtrl.push('RecoverPage');
+  }
+
+  Inicio(){
+    this.navCtrl.push(InicioPage);
   }
 
   // Attempt to login in through our User service
