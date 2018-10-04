@@ -6,7 +6,8 @@ import { Config, Nav, Platform } from 'ionic-angular';
 
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
-import { ProfilePage } from '../pages/profile/profile';
+import { RecoverPage } from '../pages/recover/recover';
+import { InicioPage } from '../pages/inicio/inicio';
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -28,7 +29,7 @@ import { ProfilePage } from '../pages/profile/profile';
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = ProfilePage;
+  rootPage = InicioPage;
 
   @ViewChild(Nav) nav: Nav;
 

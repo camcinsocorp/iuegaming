@@ -14,7 +14,12 @@ import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 import { IuebannerPage } from '../pages/iuebanner/iuebanner';
 import { IuebannerPageModule } from '../pages/iuebanner/iuebanner.module';
-import { ProfilePage } from '../pages/profile/profile';
+import { RecoverPage } from '../pages/recover/recover';
+import { RecoverPageModule } from '../pages/recover/recover.module';
+import { InicioPageModule } from '../pages/inicio/inicio.module';
+import { InicioPage } from '../pages/inicio/inicio';
+import { MenuPageModule } from '../pages/menu/menu.module';
+import { MenuPage } from '../pages/menu/menu';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -39,13 +44,15 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp,
-    ProfilePage
+    MyApp
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IuebannerPageModule,
+    RecoverPageModule,
+    InicioPageModule,
+    MenuPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -60,7 +67,9 @@ export function provideSettings(storage: Storage) {
   entryComponents: [
     MyApp,
     IuebannerPage,
-    ProfilePage
+    RecoverPage,
+    InicioPage,
+    MenuPage
   ],
   providers: [
     Api,
