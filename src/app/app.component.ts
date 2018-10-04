@@ -7,6 +7,14 @@ import { Config, Nav, Platform } from 'ionic-angular';
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 import { RecoverPage } from '../pages/recover/recover';
+import { MenuPage } from '../pages/menu/menu';
+
+export interface PageInterface{
+  title: string;
+  component?:any;
+  icon:string; 
+  
+}
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -19,6 +27,7 @@ import { RecoverPage } from '../pages/recover/recover';
     <ion-content>
       <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon item-start [name]="p.icon"></ion-icon>
           {{p.title}}
         </button>
       </ion-list>
@@ -28,22 +37,22 @@ import { RecoverPage } from '../pages/recover/recover';
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = FirstRunPage; //FirstRunPage
 
   @ViewChild(Nav) nav: Nav;
 
-  pages: any[] = [
-    { title: 'Tutorial', component: 'TutorialPage' },
-    { title: 'Welcome', component: 'WelcomePage' },
-    { title: 'Tabs', component: 'TabsPage' },
-    { title: 'Cards', component: 'CardsPage' },
-    { title: 'Content', component: 'ContentPage' },
-    { title: 'Login', component: 'LoginPage' },
-    { title: 'Signup', component: 'SignupPage' },
-    { title: 'Master Detail', component: 'ListMasterPage' },
-    { title: 'Menu', component: 'MenuPage' },
-    { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Search', component: 'SearchPage' }
+  pages: PageInterface[] = [
+    { title: 'Inicio', component: 'InicioPage', icon:'apps'},
+    { title: 'Perfil', component: 'ProfilePage', icon:'person' },
+    { title: 'Top 10', component: 'TopTenPage',icon:'list-box' },
+    { title: 'Configuración', component: 'ConfigurationsPage', icon:'settings' },
+    { title: 'Cerrar sesión', component: 'SingOffPage', icon:'exit' },
+    //{ title: 'Login', component: 'LoginPage' },
+    //{ title: 'Signup', component: 'SignupPage' },
+    //{ title: 'Master Detail', component: 'ListMasterPage' },
+    //{ title: 'Menu', component: 'MenuPage' },
+    //{ title: 'Settings', component: 'SettingsPage' },
+    //{ title: 'Search', component: 'SearchPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {

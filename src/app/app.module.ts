@@ -20,6 +20,14 @@ import { InicioPageModule } from '../pages/inicio/inicio.module';
 import { InicioPage } from '../pages/inicio/inicio';
 import { MenuPageModule } from '../pages/menu/menu.module';
 import { MenuPage } from '../pages/menu/menu';
+import { ProfilePageModule } from '../pages/profile/profile.module';
+import { ProfilePage } from '../pages/profile/profile';
+import { TopTenPageModule } from '../pages/top-ten/top-ten.module';
+import { TopTenPage } from '../pages/top-ten/top-ten';
+import { ConfigurationsPageModule } from '../pages/configurations/configurations.module';
+import { ConfigurationsPage } from '../pages/configurations/configurations';
+import { SingOffPageModule } from '../pages/sing-off/sing-off.module';
+import { SingOffPage } from '../pages/sing-off/sing-off';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -53,6 +61,10 @@ export function provideSettings(storage: Storage) {
     RecoverPageModule,
     InicioPageModule,
     MenuPageModule,
+    ProfilePageModule,
+    TopTenPageModule,
+    ConfigurationsPageModule,
+    SingOffPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -69,7 +81,11 @@ export function provideSettings(storage: Storage) {
     IuebannerPage,
     RecoverPage,
     InicioPage,
-    MenuPage
+    MenuPage,
+    ProfilePage,
+    TopTenPage,
+    ConfigurationsPage,
+    SingOffPage
   ],
   providers: [
     Api,
