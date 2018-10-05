@@ -28,6 +28,7 @@ import { ConfigurationsPageModule } from '../pages/configurations/configurations
 import { ConfigurationsPage } from '../pages/configurations/configurations';
 import { SingOffPageModule } from '../pages/sing-off/sing-off.module';
 import { SingOffPage } from '../pages/sing-off/sing-off';
+import { WelcomePage } from '../pages/welcome/welcome';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.

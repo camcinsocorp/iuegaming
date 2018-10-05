@@ -3,6 +3,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform } from 'ionic-angular';
+import { MenuController } from 'ionic-angular';
 
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
@@ -19,9 +20,18 @@ export interface PageInterface{
 @Component({
   template: `<ion-menu [content]="content">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Pages</ion-title>
-      </ion-toolbar>
+    <div class="img-Contenedor">
+    <img src="assets/img/accreditation/images/fondo.png" class="img-fondoPNG-menu">
+    </div>
+
+    <div>
+    <ion-avatar item-start>
+    </ion-avatar>
+    </div>
+
+    <div>
+    </div>
+
     </ion-header>
 
     <ion-content>
@@ -55,7 +65,7 @@ export class MyApp {
     //{ title: 'Search', component: 'SearchPage' }
   ]
 
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, public menuCtrl: MenuController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -63,7 +73,9 @@ export class MyApp {
       this.splashScreen.hide();
     });
     this.initTranslate();
+    this.menuCtrl.enable(false,'WelcomePage');
   }
+
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
