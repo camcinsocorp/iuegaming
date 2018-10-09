@@ -25,6 +25,17 @@
     "btn-signup": "REGISTRARME"
   },
 
+  "Profile": {
+    "Name": "Nombre",
+    "Document": "Cédula",
+    "Gender": "Genero",
+    "NickName": "NickName",
+    "Email": "Correo electronico",
+    "Career": "Carrera",
+    "Birthdate": "Fecha de nacimiento"
+
+  },
+
   "signup": {
     "documentNumber": "Numero de cedula",
     "name": "Nombre",
@@ -109,6 +120,8 @@
 
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Buscar"
+  "SEARCH_TITLE": "Buscar",
+
+  "PROFILE_ERROR": "ERROR"
 
 }
