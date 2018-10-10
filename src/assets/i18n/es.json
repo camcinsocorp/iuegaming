@@ -54,7 +54,9 @@
     "button": "REGISTRARME"
   },
 
-
+"SING_OFF": "CERRAR SESIÓN",
+"SING_OFF_ACEPT": "CERRAR SESIÓN",
+"SING_OFF_CANCEL": "CANCELAR",
 
 
 
