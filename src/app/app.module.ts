@@ -20,6 +20,8 @@ import { InicioPageModule } from '../pages/inicio/inicio.module';
 import { InicioPage } from '../pages/inicio/inicio';
 import { MenuPageModule } from '../pages/menu/menu.module';
 import { MenuPage } from '../pages/menu/menu';
+import { LevelsPage } from '../pages/levels/levels';
+import { LevelsPageModule } from '../pages/levels/levels.module';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -53,6 +55,7 @@ export function provideSettings(storage: Storage) {
     RecoverPageModule,
     InicioPageModule,
     MenuPageModule,
+    LevelsPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -69,7 +72,8 @@ export function provideSettings(storage: Storage) {
     IuebannerPage,
     RecoverPage,
     InicioPage,
-    MenuPage
+    MenuPage,
+    LevelsPage
   ],
   providers: [
     Api,

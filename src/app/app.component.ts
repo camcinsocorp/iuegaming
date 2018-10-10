@@ -8,6 +8,8 @@ import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 import { RecoverPage } from '../pages/recover/recover';
 import { InicioPage } from '../pages/inicio/inicio';
+import { LevelsPage } from '../pages/levels/levels';
+
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -29,7 +31,7 @@ import { InicioPage } from '../pages/inicio/inicio';
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = InicioPage;
+  rootPage = LevelsPage;
 
   @ViewChild(Nav) nav: Nav;
 
