@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+      import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Camera } from '@ionic-native/camera';
@@ -12,8 +12,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
-import { IuebannerPage } from '../pages/iuebanner/iuebanner';
-import { IuebannerPageModule } from '../pages/iuebanner/iuebanner.module';
 import { RecoverPage } from '../pages/recover/recover';
 import { RecoverPageModule } from '../pages/recover/recover.module';
 import { InicioPageModule } from '../pages/inicio/inicio.module';
@@ -22,7 +20,17 @@ import { MenuPageModule } from '../pages/menu/menu.module';
 import { MenuPage } from '../pages/menu/menu';
 import { LevelsPage } from '../pages/levels/levels';
 import { LevelsPageModule } from '../pages/levels/levels.module';
+import { ProfilePageModule } from '../pages/profile/profile.module';
+import { ProfilePage } from '../pages/profile/profile';
+import { TopTenPageModule } from '../pages/top-ten/top-ten.module';
+import { TopTenPage } from '../pages/top-ten/top-ten';
+import { ConfigurationsPageModule } from '../pages/configurations/configurations.module';
+import { ConfigurationsPage } from '../pages/configurations/configurations';
+import { SingOffPageModule } from '../pages/sing-off/sing-off.module';
+import { SingOffPage } from '../pages/sing-off/sing-off';
+import { WelcomePage } from '../pages/welcome/welcome';
 
+import { StartPage } from '../pages/start/start';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -46,16 +54,20 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    StartPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IuebannerPageModule,
     RecoverPageModule,
     InicioPageModule,
     MenuPageModule,
     LevelsPageModule,
+    ProfilePageModule,
+    TopTenPageModule,
+    ConfigurationsPageModule,
+    SingOffPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -69,11 +81,15 @@ export function provideSettings(storage: Storage) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    IuebannerPage,
     RecoverPage,
     InicioPage,
     MenuPage,
-    LevelsPage
+    LevelsPage,
+    ProfilePage,
+    TopTenPage,
+    ConfigurationsPage,
+    SingOffPage,
+    StartPage
   ],
   providers: [
     Api,

@@ -25,6 +25,17 @@
     "btn-signup": "REGISTRARME"
   },
 
+  "Profile": {
+    "Name": "Nombre",
+    "Document": "Cédula",
+    "Gender": "Genero",
+    "NickName": "NickName",
+    "Email": "Correo electronico",
+    "Career": "Carrera",
+    "Birthdate": "Fecha de nacimiento"
+
+  },
+
   "signup": {
     "documentNumber": "Numero de cedula",
     "name": "Nombre",
@@ -43,6 +54,23 @@
     "button": "REGISTRARME"
   },
 
+"SING_OFF": "CERRAR SESIÓN",
+"SING_OFF_ACEPT": "CERRAR SESIÓN",
+"SING_OFF_CANCEL": "CANCELAR",
+
+  "login": {
+    "title": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "button": "INICIAR SESIÓN"
+  },
+
+
+  "start": {
+    "title": "Bienvenid@",
+    "daily": "Juego diario",
+    "tap": "Jasdasd"
+  },
 
 
 
@@ -109,6 +137,8 @@
 
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Buscar"
+  "SEARCH_TITLE": "Buscar",
+
+  "PROFILE_ERROR": "ERROR"
 
 }
