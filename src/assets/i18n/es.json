@@ -58,6 +58,21 @@
 "SING_OFF_ACEPT": "CERRAR SESIÓN",
 "SING_OFF_CANCEL": "CANCELAR",
 
+  "login": {
+    "title": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "button": "INICIAR SESIÓN"
+  },
+
+
+  "start": {
+    "title": "Bienvenid@",
+    "daily": "Juego diario",
+    "tap": "Jasdasd"
+  },
+
+
 
 
 

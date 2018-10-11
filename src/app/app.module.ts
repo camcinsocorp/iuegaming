@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+      import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Camera } from '@ionic-native/camera';
@@ -30,6 +30,7 @@ import { SingOffPageModule } from '../pages/sing-off/sing-off.module';
 import { SingOffPage } from '../pages/sing-off/sing-off';
 import { WelcomePage } from '../pages/welcome/welcome';
 
+import { StartPage } from '../pages/start/start';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -54,6 +55,7 @@ export function provideSettings(storage: Storage) {
 @NgModule({
   declarations: [
     MyApp,
+    StartPage
   ],
   imports: [
     BrowserModule,
@@ -87,6 +89,7 @@ export function provideSettings(storage: Storage) {
     TopTenPage,
     ConfigurationsPage,
     SingOffPage
+    StartPage
   ],
   providers: [
     Api,

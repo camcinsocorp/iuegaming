@@ -17,6 +17,7 @@ export interface PageInterface{
   
 }
 
+
 @Component({
   template: `<ion-menu [content]="content">
     <ion-header>
@@ -37,6 +38,9 @@ export interface PageInterface{
     </ion-header>
 
     <ion-content>
+      <div class="">
+      </div>
+      <img src="assets/img/ian-avatar.png">
       <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon item-start [name]="p.icon"></ion-icon>
