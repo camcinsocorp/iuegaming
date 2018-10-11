@@ -4,6 +4,7 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { User } from '../../providers';
 import { MainPage } from '../';
+import { FormGroup, FormControl } from '../../../node_modules/@angular/forms';
 
 @IonicPage()
 @Component({
@@ -22,6 +23,9 @@ export class SignupPage {
 
   // Our translated text strings
   private signupErrorString: string;
+  
+  langs;
+  langForm;
 
   constructor(public navCtrl: NavController,
     public user: User,
@@ -31,6 +35,9 @@ export class SignupPage {
     this.translateService.get('SIGNUP_ERROR').subscribe((value) => {
       this.signupErrorString = value;
     })
+    this.langForm = new FormGroup({
+      "langs": new FormControl({value: 'boy'})
+    });
   }
 
   doSignup() {
@@ -49,5 +56,10 @@ export class SignupPage {
       });
       toast.present();
     });
+  }
+  
+  doSubmit(event) {
+    console.log('Submitting form', this.langForm.value);
+    event.preventDefault();
   }
 }
