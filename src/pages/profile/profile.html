@@ -1,0 +1,92 @@
+<ion-content>
+  <ion-grid padding class="p-content-profile">
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 class="p-content-profile"> 
+        <div class="p-div-content">
+        <img  class="p-accreditation-logo" src="assets/img/advance-card-tmntr.jpg">  
+        <div class="p-div2-content">
+            <ion-buttons start>
+            <button ion-button icon-only menuToggle class="p-button-menu">
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+        </div>
+      </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <form>
+    <ion-list>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <div>
+              <ion-item>
+                <ion-label floating>{{ 'Profile.Name'| translate }}</ion-label>
+                <ion-input type="text" value="Andres Gaviria Agudelo" readonly="true"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+            <div>
+              <ion-item>
+                  <ion-label floating>{{ 'Profile.Document'| translate }}</ion-label>
+                  <ion-input type="number" readonly="true" value="999899989998"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+            <ion-item>
+                <ion-label floating>{{ 'Profile.Gender'| translate }}</ion-label>
+                <ion-select>
+                    <ion-option value="Maculino">Maculino</ion-option>
+                    <ion-option value="Femenimo">Femenino</ion-option>
+                    <ion-option value="Otro">Otro</ion-option>
+                </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label floating>{{ 'Profile.NickName'| translate }}</ion-label>
+              <ion-input type="text" value="El pana"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+            <ion-item>
+              
+                <ion-label floating>{{ 'Profile.Email'| translate }}</ion-label>
+                <ion-input type="email" value="agaviriao@correo.iue.edu.co"></ion-input>
+  
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+            <ion-item>
+           
+                <ion-label floating>{{ 'Profile.Career'| translate }}</ion-label>
+                <ion-select>
+                    <ion-option value="ad">Administración financiera</ion-option>
+                    <ion-option value="ingS">Ingenieria de sistemas</ion-option>
+                    <ion-option value="ingE">Ingenieria electronica</ion-option>
+                </ion-select>
+  
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item>
+                <ion-label floating>{{ 'Profile.Birthdate'| translate }}</ion-label>
+                <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </form>
+</ion-content>

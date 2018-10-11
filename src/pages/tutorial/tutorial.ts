@@ -33,15 +33,15 @@ export class TutorialPage {
         description: this.tutorialStrings[1],
         image: 'assets/img/accreditation/images/logo.png',
       },
-      {
+      { 
         title: this.tutorialStrings[2],
         description: this.tutorialStrings[3],
-        image: 'assets/img/accreditation/images/logoiue.png',
+        image: 'assets/img/accreditation/images/Muñecos.svg',
       },
       {
         title: this.tutorialStrings[4],
         description: this.tutorialStrings[5],
-        image: 'assets/img/accreditation/images/logo.png',
+        image: 'assets/img/accreditation/images/PersonajesAll.svg',
       },
     ];
     this.dir = platform.dir();

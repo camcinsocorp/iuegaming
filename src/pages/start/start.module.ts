@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { IuebannerPage } from './iuebanner';
+import { StartPage } from './start';
 
 @NgModule({
   declarations: [
-    IuebannerPage,
+    StartPage,
   ],
   imports: [
-    IonicPageModule.forChild(IuebannerPage),
+    IonicPageModule.forChild(StartPage),
   ],
 })
-export class IuebannerPageModule {}
+export class StartPageModule {}

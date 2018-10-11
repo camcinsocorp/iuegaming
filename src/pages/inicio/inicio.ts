@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { WelcomePage } from '../welcome/welcome';
 
 /**
- * Generated class for the IuebannerPage page.
+ * Generated class for the InicioPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +11,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-iuebanner',
-  templateUrl: 'iuebanner.html',
+  selector: 'page-inicio',
+  templateUrl: 'inicio.html',
 })
-export class IuebannerPage {
+export class InicioPage {
+
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad IuebannerPage');
+    console.log('ionViewDidLoad InicioPage');
   }
 
 }
