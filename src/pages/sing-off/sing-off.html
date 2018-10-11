@@ -1,0 +1,31 @@
+<ion-content class="SO-content">
+  <ion-grid  padding class="SO-content">
+      <ion-row>
+          <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 class="SO-content">
+            <img class="welcome-accreditation-logo" src="assets/img/accreditation/images/iue8.svg">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+            <div class="SO-div-Content">
+              <ion-label class="SO-Label-Content">{{ 'SING_OFF'| translate }}</ion-label>
+            </div>
+          </ion-col> 
+        </ion-row>
+        <ion-row>
+          
+            <ion-col col-6 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+                <div class="SO-button-content">
+                <button ion-button block (click)="Confirmar()">{{ 'SING_OFF_ACEPT' | translate }}</button>
+              </div>
+              </ion-col>
+          <ion-col col-6 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+              <div class="SO-button-content2">
+            <button ion-button block (click)="IRINICIO()">{{ 'SING_OFF_CANCEL' | translate }}</button>
+          </div>
+          </ion-col>
+    
+        </ion-row>
+  </ion-grid>
+
+</ion-content>

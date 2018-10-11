@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { WelcomePage } from '../welcome/welcome';
 
 /**
- * Generated class for the InicioPage page.
+ * Generated class for the ConfigurationsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +10,16 @@ import { WelcomePage } from '../welcome/welcome';
 
 @IonicPage()
 @Component({
-  selector: 'page-inicio',
-  templateUrl: 'inicio.html',
+  selector: 'page-configurations',
+  templateUrl: 'configurations.html',
 })
-export class InicioPage {
-
-  
+export class ConfigurationsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InicioPage');
+    console.log('ionViewDidLoad ConfigurationsPage');
   }
 
 }
