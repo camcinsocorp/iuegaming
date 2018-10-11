@@ -7,6 +7,7 @@ import { Config, Nav, Platform } from 'ionic-angular';
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 
+
 @Component({
   template: `<ion-menu [content]="content">
     <ion-header>
@@ -16,6 +17,9 @@ import { Settings } from '../providers';
     </ion-header>
 
     <ion-content>
+      <div class="">
+      </div>
+      <img src="assets/img/ian-avatar.png">
       <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           {{p.title}}

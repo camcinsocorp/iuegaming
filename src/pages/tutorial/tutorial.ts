@@ -33,7 +33,7 @@ export class TutorialPage {
         description: this.tutorialStrings[1],
         image: 'assets/img/accreditation/images/logo.png',
       },
-      {
+      { 
         title: this.tutorialStrings[2],
         description: this.tutorialStrings[3],
         image: 'assets/img/accreditation/images/logoiue.png',
