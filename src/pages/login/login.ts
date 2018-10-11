@@ -4,6 +4,7 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { User } from '../../providers';
 import { MainPage } from '../';
+import { InicioPage } from '../inicio/inicio';
 import { StartPage } from '../start/start';
 
 @IonicPage()
@@ -33,6 +34,12 @@ export class LoginPage {
     })
   }
 
+  Recover() {
+    this.navCtrl.push('RecoverPage');
+  }
+
+  Inicio(){
+    this.navCtrl.setRoot('InicioPage');
   // Attempt to login in through our User service
   doLogin() {
     this.user.login(this.account).subscribe((resp) => {
@@ -48,4 +55,7 @@ export class LoginPage {
       toast.present();
     });
   }
+
+  // Attempt to login in through our User service
+
 }

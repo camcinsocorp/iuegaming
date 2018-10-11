@@ -1,0 +1,29 @@
+page-profile {
+
+    .p-content-profile{
+        padding: 0px !important;
+    }
+
+    .p-div-content{
+        position: relative;
+        display: inline-block;
+    }
+
+    .p-div2-content{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .p-button-menu{
+        background-color: transparent;
+        color: orange;
+        border: none;
+    }
+
+    .p-accreditation-logo{
+        width: 100%;
+        padding: 0px !important;
+    }
+
+}

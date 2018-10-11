@@ -1,0 +1,136 @@
+<!--
+  Generated template for the RecoverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'RECOVER_PASSWORD' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="Principal">
+    <form>
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <div class="r-label-content">
+                <ion-item>
+                  <ion-label floating>{{ 'EMAIL2' | translate }}</ion-label>
+                  <ion-input type="email" name="email"></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <div class="r-content-button">
+                <button ion-button color="primary" block (click)="Aceptar()">{{ 'RECOVER_BUTTON' | translate }}</button>
+              </div>
+            </ion-col> 
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+    </form>
+  </div>
+
+  <div *ngIf="ShowRe">
+    <form>
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <div class="r-label-content">
+                <ion-item>
+                  <ion-label floating>{{ 'CODE' | translate }}</ion-label>
+                  <ion-input type="number" name="number"></ion-input>
+                </ion-item>
+              </div>
+
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <div class="r-content-button">
+                <button ion-button color="primary" block (click)="Listo()">{{ 'ACCEPT' | translate }}</button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+    </form>
+  </div>
+
+  <div *ngIf="Valido">
+    <form>
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <div class="r-label-content">
+                <p>{{ 'CODE_VALID' | translate }}</p>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <div class="r-content-button">
+                <button ion-button color="primary" block (click)="RestablecerPassword()">{{ 'R_PASSWORD' | translate }}</button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+    </form>
+
+  </div>
+
+  <div *ngIf="Invalido">
+
+  </div>
+
+  <div *ngIf="Restablecer">
+    <form>
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <div class="r-label-content">
+                <ion-item>
+                  <ion-label floating>{{ 'NEW_PASSWORD' | translate }}</ion-label>
+                  <ion-input type="password" name="password"></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <div>
+                <ion-item>
+                  <ion-label floating>{{ 'CONFIR_NEW_PASSWORD' | translate }}</ion-label>
+                  <ion-input type="password" name="password"></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <div class="r-content-button">
+                <button ion-button color="primary" block (click)="PageInicio()">{{ 'UPDATE_PASSWORD' | translate }}</button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+    </form>
+
+  </div>
+
+</ion-content>
