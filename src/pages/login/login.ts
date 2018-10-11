@@ -5,6 +5,7 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { User } from '../../providers';
 import { MainPage } from '../';
 import { InicioPage } from '../inicio/inicio';
+import { StartPage } from '../start/start';
 
 @IonicPage()
 @Component({
@@ -16,8 +17,8 @@ export class LoginPage {
   // If you're using the username field with or without email, make
   // sure to add it to the type
   account: { email: string, password: string } = {
-    email: 'test@example.com',
-    password: 'test'
+    email: '',
+    password: ''
   };
 
   // Our translated text strings
@@ -39,6 +40,20 @@ export class LoginPage {
 
   Inicio(){
     this.navCtrl.setRoot('InicioPage');
+  // Attempt to login in through our User service
+  doLogin() {
+    this.user.login(this.account).subscribe((resp) => {
+      this.navCtrl.push(StartPage);
+    }, (err) => {
+      this.navCtrl.push(StartPage);
+      // Unable to log in
+      let toast = this.toastCtrl.create({
+        message: this.loginErrorString,
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
+    });
   }
 
   // Attempt to login in through our User service
