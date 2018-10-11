@@ -8,6 +8,7 @@ import { MenuController } from 'ionic-angular';
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 import { RecoverPage } from '../pages/recover/recover';
+import { InicioPage } from '../pages/inicio/inicio';
 import { MenuPage } from '../pages/menu/menu';
 
 export interface PageInterface{
@@ -16,7 +17,6 @@ export interface PageInterface{
   icon:string; 
   
 }
-
 
 @Component({
   template: `<ion-menu [content]="content">

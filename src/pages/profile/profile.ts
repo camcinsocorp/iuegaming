@@ -14,13 +14,13 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-  private loginErrorString: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public translateService: TranslateService) {
 
     this.translateService.get('PROFILE_ERROR').subscribe((value) => {
       this.loginErrorString = value;
     })
+
   }
 
   ionViewDidLoad() {
