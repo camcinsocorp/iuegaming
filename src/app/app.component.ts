@@ -22,19 +22,10 @@ export interface PageInterface{
   template: `<ion-menu [content]="content">
     <ion-header>
     <div class="img-Contenedor">
-    <img src="assets/img/accreditation/images/fondo.png" class="img-fondoPNG-menu">
-    </div>
-
-    <div>
     <ion-avatar item-start>
+    <img src="assets/img/accreditation/images/fondo.png" class="img-fondoPNG-menu">
     </ion-avatar>
     </div>
-
-    <div>
-    </div>
-
-    
-
     </ion-header>
 
     <ion-content>
@@ -58,7 +49,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: PageInterface[] = [
-    { title: 'Inicio', component: 'InicioPage', icon:'apps'},
+    { title: 'Inicio', component: 'StartPage', icon:'apps'},
     { title: 'Perfil', component: 'ProfilePage', icon:'person' },
     { title: 'Top 10', component: 'TopTenPage',icon:'list-box' },
     { title: 'Configuración', component: 'ConfigurationsPage', icon:'settings' },
