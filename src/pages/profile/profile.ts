@@ -18,7 +18,7 @@ export class ProfilePage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public translateService: TranslateService) {
 
     this.translateService.get('PROFILE_ERROR').subscribe((value) => {
-      this.loginErrorString = value;
+      // this.loginErrorString = value;
     })
 
   }
