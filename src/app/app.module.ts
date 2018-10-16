@@ -31,6 +31,8 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { StartPage } from '../pages/start/start';
 import { UserServicesProvider } from '../providers/services/user-services/user-services';
 import { GlobalProvider } from '../providers/global/global';
+import { LoginPage } from '../pages/login/login';
+import { LoginPageModule } from '../pages/login/login.module';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -67,6 +69,7 @@ export function provideSettings(storage: Storage) {
     TopTenPageModule,
     ConfigurationsPageModule,
     SingOffPageModule,
+    LoginPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -87,7 +90,8 @@ export function provideSettings(storage: Storage) {
     TopTenPage,
     ConfigurationsPage,
     SingOffPage,
-    StartPage
+    StartPage,
+    LoginPage
   ],
   providers: [
     Api,
