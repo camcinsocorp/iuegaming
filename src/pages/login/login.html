@@ -15,7 +15,7 @@
               <div>
                 <ion-item>
                   <ion-label floating>{{ 'EMAIL' | translate }}</ion-label>
-                  <ion-input type="email" name="email"></ion-input>
+                  <ion-input type="email" [(ngModel)]="userLogin.email" name="email"></ion-input>
                 </ion-item>
               </div>
             </ion-col>
@@ -33,7 +33,7 @@
             <ion-col col-12>
               <ion-item>
                 <ion-label floating>{{ 'PASSWORD' | translate }}</ion-label>
-                <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+                <ion-input type="password" [(ngModel)]="userLogin.password" name="password"></ion-input>
               </ion-item>
             </ion-col>
           </ion-row>
@@ -60,7 +60,7 @@
           <ion-row>
             <ion-col col-12>
               <div padding class="button-div-content">
-                <button ion-button color="primary" block (click)="Inicio()">{{ 'LOGIN_BUTTON' | translate }}</button>
+                <button ion-button color="primary" block (click)="doLogin()">{{ 'LOGIN_BUTTON' | translate }}</button>
               </div>
             </ion-col>
           </ion-row>

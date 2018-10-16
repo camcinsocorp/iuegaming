@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
-import { User } from '../../providers';
 import { MainPage } from '../';
+import { FormGroup, FormControl } from '../../../node_modules/@angular/forms';
+import { Signup } from '../../models/signup';
+import { UserServicesProvider } from '../../providers/services/user-services/user-services';
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -23,31 +26,84 @@ export class SignupPage {
   // Our translated text strings
   private signupErrorString: string;
 
+  langs;
+  langForm;
+
+
+  private userSignup: Signup;
+  private confirmPassword: string;
+
   constructor(public navCtrl: NavController,
-    public user: User,
     public toastCtrl: ToastController,
-    public translateService: TranslateService) {
+    public translateService: TranslateService,
+    public userServicesProvider: UserServicesProvider) {
 
     this.translateService.get('SIGNUP_ERROR').subscribe((value) => {
       this.signupErrorString = value;
     })
+    this.langForm = new FormGroup({
+      "langs": new FormControl({ value: 'boy' })
+    });
+
+
+    this.userSignup = new Signup();
+    this.userSignup.email;
+    this.userSignup.password;
+    this.userSignup.identification;
+    this.userSignup.name;
+    this.userSignup.gender;
+    this.userSignup.nickname;
+    this.confirmPassword;
   }
 
   doSignup() {
-    // Attempt to login in through our User service
-    this.user.signup(this.account).subscribe((resp) => {
-      this.navCtrl.push(MainPage);
-    }, (err) => {
-
-      this.navCtrl.push(MainPage);
-
-      // Unable to sign up
+    if (this.userSignup.email == undefined || this.userSignup.password == undefined || this.userSignup.email == "" || this.userSignup.password == "" ||
+      this.userSignup.identification == undefined || this.userSignup.name == undefined || this.userSignup.identification == "" || this.userSignup.name == "" ||
+      this.userSignup.gender == undefined || this.userSignup.nickname == undefined || this.userSignup.gender == "" || this.userSignup.nickname == "") {
       let toast = this.toastCtrl.create({
-        message: this.signupErrorString,
+        message: 'Campos incorrectos.',
         duration: 3000,
         position: 'top'
       });
       toast.present();
-    });
+    } else {
+      if (this.userSignup.password !== this.confirmPassword) {
+        let toast = this.toastCtrl.create({
+          message: 'Revisa tus contraseñas.',
+          duration: 3000,
+          position: 'top'
+        });
+        toast.present();
+      } else {
+        this.userServicesProvider.Signup(this.userSignup)
+          .then(data => {
+            if (data) {
+              let toast = this.toastCtrl.create({
+                message: data.message,
+                duration: 3000,
+                position: 'top'
+              });
+              toast.present();
+              this.navCtrl.push(LoginPage);
+            }
+          })
+      }
+    }
+    // Attempt to login in through our User service
+    // this.user.signup(this.account).subscribe((resp) => {
+    //   this.navCtrl.push(MainPage);
+    // }, (err) => {
+
+    //   this.navCtrl.push(MainPage);
+
+    //   // Unable to sign up
+    //   let toast = this.toastCtrl.create({
+    //     message: this.signupErrorString,
+    //     duration: 3000,
+    //     position: 'top'
+    //   });
+    //   toast.present();
+    // });
   }
+
 }
