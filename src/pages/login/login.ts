@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
-import { User } from '../../providers';
 import { MainPage } from '../';
+import { InicioPage } from '../inicio/inicio';
 import { StartPage } from '../start/start';
+import { UserServicesProvider } from '../../providers/services/user-services/user-services';
+import { Login } from '../../models/login';
+import { GlobalProvider } from '../../providers/global/global';
 
 @IonicPage()
 @Component({
@@ -23,29 +26,70 @@ export class LoginPage {
   // Our translated text strings
   private loginErrorString: string;
 
+  private userLogin: Login;
+
   constructor(public navCtrl: NavController,
-    public user: User,
     public toastCtrl: ToastController,
-    public translateService: TranslateService) {
+    public translateService: TranslateService,
+    public userServicesProvider: UserServicesProvider,
+    public global: GlobalProvider) {
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
     })
+
+    this.userLogin = new Login();
+    this.userLogin.email;
+    this.userLogin.password;
+
   }
 
-  // Attempt to login in through our User service
+  Recover() {
+    this.navCtrl.push('RecoverPage');
+  }
+
+  Inicio() {
+    this.navCtrl.setRoot('InicioPage');
+    // Attempt to login in through our User service
+  }
   doLogin() {
-    this.user.login(this.account).subscribe((resp) => {
-      this.navCtrl.push(StartPage);
-    }, (err) => {
-      this.navCtrl.push(StartPage);
-      // Unable to log in
+    if (this.userLogin.email == undefined || this.userLogin.password == undefined || this.userLogin.email == "" || this.userLogin.password == "") {
       let toast = this.toastCtrl.create({
-        message: this.loginErrorString,
+        message: 'Campos incorrectos.',
         duration: 3000,
         position: 'top'
       });
       toast.present();
-    });
+    } else {
+      this.userServicesProvider.Login(this.userLogin)
+        .then(data => {
+          if (data) {
+            this.global.userEmail = this.userLogin.email;
+            this.global.userToken = data.token;
+            this.global.userName = data.name;
+            this.global.userGender = data.gender;
+            this.global.userLevelsCompleted = data.levelsCompleted;
+            console.log(this.global.userEmail + " " + this.global.userToken + " " + this.global.userName + " " + this.global.userGender + " " );
+            this.navCtrl.push(StartPage);
+          }
+        })
+    }
+
+
+    //   this.user.login(this.account).subscribe((resp) => {
+    //     this.navCtrl.push(StartPage);
+    //   }, (err) => {
+    //     this.navCtrl.push(StartPage);
+    //     // Unable to log in
+    //     let toast = this.toastCtrl.create({
+    //       message: this.loginErrorString,
+    //       duration: 3000,
+    //       position: 'top'
+    //     });
+    //     toast.present();
+    //   });
+    // }
+
+    // Attempt to login in through our User service
   }
 }

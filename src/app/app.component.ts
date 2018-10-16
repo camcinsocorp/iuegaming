@@ -3,17 +3,38 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform } from 'ionic-angular';
+import { MenuController } from 'ionic-angular';
 
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
+import { RecoverPage } from '../pages/recover/recover';
+import { InicioPage } from '../pages/inicio/inicio';
+import { MenuPage } from '../pages/menu/menu';
 
+export interface PageInterface{
+  title: string;
+  component?:any;
+  icon:string; 
+  
+}
 
 @Component({
   template: `<ion-menu [content]="content">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Pages</ion-title>
-      </ion-toolbar>
+    <div class="img-Contenedor">
+    <img src="assets/img/accreditation/images/fondo.png" class="img-fondoPNG-menu">
+    </div>
+
+    <div>
+    <ion-avatar item-start>
+    </ion-avatar>
+    </div>
+
+    <div>
+    </div>
+
+    
+
     </ion-header>
 
     <ion-content>
@@ -22,6 +43,7 @@ import { Settings } from '../providers';
       <img src="assets/img/ian-avatar.png">
       <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon item-start [name]="p.icon"></ion-icon>
           {{p.title}}
         </button>
       </ion-list>
@@ -31,25 +53,25 @@ import { Settings } from '../providers';
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = FirstRunPage; //FirstRunPage
 
   @ViewChild(Nav) nav: Nav;
 
-  pages: any[] = [
-    { title: 'Tutorial', component: 'TutorialPage' },
-    { title: 'Welcome', component: 'WelcomePage' },
-    { title: 'Tabs', component: 'TabsPage' },
-    { title: 'Cards', component: 'CardsPage' },
-    { title: 'Content', component: 'ContentPage' },
-    { title: 'Login', component: 'LoginPage' },
-    { title: 'Signup', component: 'SignupPage' },
-    { title: 'Master Detail', component: 'ListMasterPage' },
-    { title: 'Menu', component: 'MenuPage' },
-    { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Search', component: 'SearchPage' }
+  pages: PageInterface[] = [
+    { title: 'Inicio', component: 'InicioPage', icon:'apps'},
+    { title: 'Perfil', component: 'ProfilePage', icon:'person' },
+    { title: 'Top 10', component: 'TopTenPage',icon:'list-box' },
+    { title: 'Configuración', component: 'ConfigurationsPage', icon:'settings' },
+    { title: 'Cerrar sesión', component: 'SingOffPage', icon:'exit' },
+    //{ title: 'Login', component: 'LoginPage' },
+    //{ title: 'Signup', component: 'SignupPage' },
+    //{ title: 'Master Detail', component: 'ListMasterPage' },
+    //{ title: 'Menu', component: 'MenuPage' },
+    //{ title: 'Settings', component: 'SettingsPage' },
+    //{ title: 'Search', component: 'SearchPage' }
   ]
 
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, public menuCtrl: MenuController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -57,7 +79,9 @@ export class MyApp {
       this.splashScreen.hide();
     });
     this.initTranslate();
+    this.menuCtrl.enable(false,'WelcomePage');
   }
+
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.

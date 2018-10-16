@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GlobalProvider } from '../../providers/global/global';
 
 /**
  * Generated class for the StartPage page.
@@ -15,7 +16,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class StartPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  userName = this.global.userName;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public global: GlobalProvider) {
   }
 
   ionViewDidLoad() {

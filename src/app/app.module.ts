@@ -1,4 +1,4 @@
-      import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Camera } from '@ionic-native/camera';
@@ -10,9 +10,29 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { Items } from '../mocks/providers/items';
-import { Settings, User, Api } from '../providers';
+import { Settings, Api } from '../providers';
 import { MyApp } from './app.component';
+import { RecoverPage } from '../pages/recover/recover';
+import { RecoverPageModule } from '../pages/recover/recover.module';
+import { InicioPageModule } from '../pages/inicio/inicio.module';
+import { InicioPage } from '../pages/inicio/inicio';
+import { MenuPageModule } from '../pages/menu/menu.module';
+import { MenuPage } from '../pages/menu/menu';
+import { ProfilePageModule } from '../pages/profile/profile.module';
+import { ProfilePage } from '../pages/profile/profile';
+import { TopTenPageModule } from '../pages/top-ten/top-ten.module';
+import { TopTenPage } from '../pages/top-ten/top-ten';
+import { ConfigurationsPageModule } from '../pages/configurations/configurations.module';
+import { ConfigurationsPage } from '../pages/configurations/configurations';
+import { SingOffPageModule } from '../pages/sing-off/sing-off.module';
+import { SingOffPage } from '../pages/sing-off/sing-off';
+import { WelcomePage } from '../pages/welcome/welcome';
+
 import { StartPage } from '../pages/start/start';
+import { UserServicesProvider } from '../providers/services/user-services/user-services';
+import { GlobalProvider } from '../providers/global/global';
+import { LoginPage } from '../pages/login/login';
+import { LoginPageModule } from '../pages/login/login.module';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -42,6 +62,14 @@ export function provideSettings(storage: Storage) {
   imports: [
     BrowserModule,
     HttpClientModule,
+    RecoverPageModule,
+    InicioPageModule,
+    MenuPageModule,
+    ProfilePageModule,
+    TopTenPageModule,
+    ConfigurationsPageModule,
+    SingOffPageModule,
+    LoginPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -55,18 +83,27 @@ export function provideSettings(storage: Storage) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    StartPage
+    RecoverPage,
+    InicioPage,
+    MenuPage,
+    ProfilePage,
+    TopTenPage,
+    ConfigurationsPage,
+    SingOffPage,
+    StartPage,
+    LoginPage
   ],
   providers: [
     Api,
     Items,
-    User,
     Camera,
     SplashScreen,
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    UserServicesProvider,
+    GlobalProvider
   ]
 })
 export class AppModule { }
