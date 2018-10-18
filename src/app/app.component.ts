@@ -22,16 +22,23 @@ export interface PageInterface{
   template: `<ion-menu [content]="content">
     <ion-header>
     <div class="img-Contenedor">
+    <img src="assets/img/accreditation/images/fondo.png">
+    <div class="img-texto-encima">
     <ion-avatar item-start>
-    <img src="assets/img/accreditation/images/fondo.png" class="img-fondoPNG-menu">
+    <img src="assets/img/marty-avatar.png" class="circle-pic">
     </ion-avatar>
+    </div>
+    <div class="img-texto-centrado">
+    <ion-label>Felipe Dos Santos</ion-label>
+    <ion-label>fepeDos</ion-label>
+    </div>
     </div>
     </ion-header>
 
     <ion-content>
       <div class="">
       </div>
-      <img src="assets/img/ian-avatar.png">
+     
       <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon item-start [name]="p.icon"></ion-icon>
