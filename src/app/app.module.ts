@@ -1,3 +1,4 @@
+import { StartDailyPageModule } from './../pages/start-daily/start-daily.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,7 +35,8 @@ import { UserServicesProvider } from '../providers/services/user-services/user-s
 import { GlobalProvider } from '../providers/global/global';
 import { LoginPage } from '../pages/login/login';
 import { LoginPageModule } from '../pages/login/login.module';
-import { StartPageModule } from '../pages/start/start.module';
+
+import { StartDailyPage } from '../pages/start-daily/start-daily';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -72,6 +74,7 @@ export function provideSettings(storage: Storage) {
     ConfigurationsPageModule,
     SingOffPageModule,
     LoginPageModule,
+    StartDailyPageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -92,8 +95,9 @@ export function provideSettings(storage: Storage) {
     TopTenPage,
     ConfigurationsPage,
     SingOffPage,
+    LoginPage,
     StartPage,
-    LoginPage
+    StartDailyPage
   ],
   providers: [
     Api,
