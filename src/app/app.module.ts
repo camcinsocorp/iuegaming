@@ -1,3 +1,5 @@
+import { QuestionsPageModule } from './../pages/questions/questions.module';
+import { QuestionsPage } from './../pages/questions/questions';
 import { StartDailyPageModule } from './../pages/start-daily/start-daily.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -74,6 +76,7 @@ export function provideSettings(storage: Storage) {
     ConfigurationsPageModule,
     SingOffPageModule,
     LoginPageModule,
+    QuestionsPageModule,
     StartDailyPageModule,
     TranslateModule.forRoot({
       loader: {
@@ -97,6 +100,7 @@ export function provideSettings(storage: Storage) {
     SingOffPage,
     LoginPage,
     StartPage,
+    QuestionsPage,
     StartDailyPage
   ],
   providers: [

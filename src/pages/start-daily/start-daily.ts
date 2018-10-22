@@ -1,3 +1,4 @@
+import { QuestionsPage } from './../questions/questions';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GlobalProvider } from '../../providers/global/global';
@@ -47,6 +48,10 @@ export class StartDailyPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StartDailyPage');
+  }
+
+  goQuestions(){
+    this.navCtrl.setRoot(QuestionsPage);
   }
 
 }

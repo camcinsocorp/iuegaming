@@ -25,7 +25,7 @@
   <ion-grid>
     <ion-row>
       <ion-col col-2.4 *ngFor="let newButton of Newb">
-        <button ion-button [ngStyle]="{'color': newButton.color}" block class="sd-button-content">{{newButton.valor}}</button>
+        <button ion-button [ngStyle]="{'color': newButton.color}" block class="sd-button-content" (click)="goQuestions()">{{newButton.valor}}</button>
       </ion-col>
     </ion-row>
     
