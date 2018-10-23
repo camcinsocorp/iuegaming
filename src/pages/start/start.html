@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'start.title' | translate }} {{ userName }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="doClick()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+  
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-title>{{ welcomeMessage }}</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <img src="assets/img/accreditation/images/she.png" class="start-img-content"
+          alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="start-label-content">
+        <ion-label>¡Hola!</ion-label>
+      </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
+        <button ion-button color="primary" block class="start-button-content" (click)="goStartDayli()">{{ 'start.daily' | translate }}</button>
+      </ion-col>
+      <ion-col col-6 col-sm-4.5 col-md-3 col-lg-2 col-xl-1.5>
+        <button ion-button color="primary" block class="start-button-content">{{ 'start.tap' | translate }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -10,12 +10,22 @@ page-tutorial {
 
   .slide-title {
     margin-top: 2.8rem;
+    text-align: center;
   }
 
   .slide-image {
-    max-height: 40%;
-    max-width: 60%;
+    max-height: 60%;
+    max-width: 80%;
     margin: 36px 0;
+    margin-top: 30%;
+  }
+
+  .slide-image2 {
+    max-height: 60%;
+    max-width: 80%;
+    margin: 36px 0;
+    margin-top: 30%;
+    margin-bottom: 30%;
   }
 
   b {
