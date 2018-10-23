@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GlobalProvider } from '../../providers/global/global';
+import { StartDailyPage } from '../start-daily/start-daily';
 
 /**
  * Generated class for the StartPage page.
@@ -23,6 +24,10 @@ export class StartPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StartPage');
+  }
+
+  goStartDayli(){
+    this.navCtrl.setRoot(StartDailyPage);
   }
 
 }
