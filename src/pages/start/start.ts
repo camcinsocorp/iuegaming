@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GlobalProvider } from '../../providers/global/global';
 import { StartDailyPage } from '../start-daily/start-daily';
+import { TapPage } from '../tap/tap';
 
 /**
  * Generated class for the StartPage page.
@@ -28,6 +29,10 @@ export class StartPage {
 
   goStartDayli(){
     this.navCtrl.setRoot(StartDailyPage);
+  }
+
+  goTap(){
+    this.navCtrl.setRoot(TapPage);
   }
 
 }
