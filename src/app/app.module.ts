@@ -39,6 +39,8 @@ import { LoginPage } from '../pages/login/login';
 import { LoginPageModule } from '../pages/login/login.module';
 
 import { StartDailyPage } from '../pages/start-daily/start-daily';
+import { TapPage } from '../pages/tap/tap';
+import { TapPageModule } from '../pages/tap/tap.module';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -76,8 +78,10 @@ export function provideSettings(storage: Storage) {
     ConfigurationsPageModule,
     SingOffPageModule,
     LoginPageModule,
+    TapPageModule,
     QuestionsPageModule,
     StartDailyPageModule,
+    
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -101,6 +105,7 @@ export function provideSettings(storage: Storage) {
     LoginPage,
     StartPage,
     QuestionsPage,
+    TapPage,
     StartDailyPage
   ],
   providers: [
