@@ -84,7 +84,9 @@ export class SignupPage {
                 position: 'top'
               });
               toast.present();
-              this.navCtrl.push(LoginPage);
+              if (data.message == 'User Created') {
+                this.navCtrl.push(LoginPage);
+              }
             }
           })
       }
