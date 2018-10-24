@@ -11,6 +11,9 @@
     "third": {
       "title": "TOP 10",
       "subtitle": "... donde compartimos, jugamos y aprendemos sobre el proceso de ACREDITACIÓN de ALTA CALIDAD"
+    },
+    "continue": {
+      "continue-button": "CONTINUAR"
     }
   },
 
@@ -73,7 +76,8 @@
   "start": {
     "title": "Bienvenid@",
     "daily": "ACREDITACIÓN",
-    "tap": "RETO DIARIO"
+    "tap": "RETO DIARIO",
+    "wiki": "APRENDER"
   },
 
 
