@@ -31,7 +31,7 @@ export class TutorialPage {
       {
         title: this.tutorialStrings[0],
         description: this.tutorialStrings[1],
-        image: 'assets/img/accreditation/images/logo.png',
+        image: 'assets/img/accreditation/images/accreditation-logo.png',
       },
       { 
         title: this.tutorialStrings[2],

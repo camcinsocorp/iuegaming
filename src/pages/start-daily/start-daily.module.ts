@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { TranslateModule } from '@ngx-translate/core';
-import { TopTenPage } from './top-ten';
+import { StartDailyPage } from './start-daily';
 
 @NgModule({
   declarations: [
-    TopTenPage,
+    StartDailyPage,
   ],
   imports: [
-    IonicPageModule.forChild(TopTenPage),
+    IonicPageModule.forChild(StartDailyPage),
     TranslateModule.forChild()
   ],
 })
-export class TopTenPageModule {}
+export class StartDailyPageModule {}

@@ -1,17 +1,19 @@
 page-login {
-
     .div-content{
-        margin-top: 30%;
+        margin-top: 20%;
     }
-
     .button-div-content{
-        margin-top: 25%;
+        margin-top: 10%;
     }
-    .centrar{
+    .login-account-message{
         text-align: center !important;
     }
-
     .lg-label{
         text-align: left;
+    }
+    .login-head-img{
+        width: 60%;
+        display: block;
+        margin: auto;
     }
 }

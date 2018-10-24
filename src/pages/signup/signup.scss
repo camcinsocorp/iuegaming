@@ -1,3 +1,9 @@
 page-signup {
-
+    //Eliminar botones incrementales y decrecientes del campo de número
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+    }
+    input[type=number] { -moz-appearance:textfield; }
 }

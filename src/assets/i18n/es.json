@@ -2,15 +2,18 @@
 
   "tutorial": {
     "first": {
-      "title": "",
+      "title": "Institución Universitaria de Envigado",
       "subtitle": ""
     },
     "second": {
-      "subtitle": "Bienvenidos a un ambiente de integración y aprendizaje entre todos los integrantes de la IUE"
+      "subtitle": "Bienvenidos a un ambiente de integración y aprendizaje para todos los integrantes de la IUE ..."
     },
     "third": {
       "title": "TOP 10",
-      "subtitle": "Lugar donde compartirás, competiras, recibirás recompensas y, sobre todo, aprenderas lo mas necesario para alcanzar una meta comun"
+      "subtitle": "... donde compartimos, jugamos y aprendemos sobre el proceso de ACREDITACIÓN de ALTA CALIDAD"
+    },
+    "continue": {
+      "continue-button": "CONTINUAR"
     }
   },
 
@@ -20,7 +23,7 @@
 
 
   "welcome": {
-    "title": "Inicia sesión o registrate para divertirte y aprender con el proceso de acreditación IUE",
+    "title": "Inicia sesión o registrate para divertirte y aprender con el proceso de ACREDITACIÓN IUE",
     "btn-login": "INICIAR SESIÓN",
     "btn-signup": "REGISTRARME"
   },
@@ -62,14 +65,19 @@
     "title": "Iniciar sesión",
     "email": "Correo electrónico",
     "password": "Contraseña",
-    "button": "INICIAR SESIÓN"
-  },
+    "button": "INICIAR SESIÓN",
+    "remember": "Recordarme",
+    "forgot": "Olvidé la clave",
+    "account": "¿No tienes cuenta?",
+    "createAccount": "Crea una"
+},
 
 
   "start": {
     "title": "Bienvenid@",
-    "daily": "Juego diario",
-    "tap": "Jasdasd"
+    "daily": "ACREDITACIÓN",
+    "tap": "RETO DIARIO",
+    "wiki": "APRENDER"
   },
 
 
