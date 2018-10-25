@@ -62,7 +62,7 @@ export class MyApp {
     { title: 'Perfil', component: 'ProfilePage', icon: 'person' },
     { title: 'Top 10', component: 'TopTenPage', icon: 'list-box' },
     { title: 'Configuración', component: 'ConfigurationsPage', icon: 'settings' },
-    { title: 'Cerrar sesión', component: 'SingOffPage', icon: 'exit' },
+    { title: 'Cerrar sesión', component: 'SignOffPage', icon: 'exit' },
     //{ title: 'Login', component: 'LoginPage' },
     //{ title: 'Signup', component: 'SignupPage' },
     //{ title: 'Master Detail', component: 'ListMasterPage' },
