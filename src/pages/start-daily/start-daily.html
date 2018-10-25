@@ -24,11 +24,9 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-2.4 *ngFor="let newButton of Newb">
-        <button ion-button [ngStyle]="{'color': newButton.color}" block class="sd-button-content" (click)="goQuestions()">{{newButton.valor}}</button>
+      <ion-col col-2.4 *ngFor="let levels of GameList">
+        <button ion-button  block class="sd-button-content" (click)="goQuestions(levels.levelNumber)">{{ levels.levelNumber }}</button>
       </ion-col>
     </ion-row>
-    
   </ion-grid>
-
 </ion-content>
