@@ -4,6 +4,7 @@ import { environment } from '../../../variables/variables.base';
 import { Headers, URLSearchParams, RequestOptions, Response } from '@angular/http';
 import { ResponseLogin } from '../../../models/response-login';
 import { ResponseSingup } from '../../../models/response-singup';
+import { ResponseTop } from '../../../models/response-top';
 
 
 
@@ -125,6 +126,20 @@ export class UserServicesProvider {
       .map((response: ResponseSingup) => <ResponseSingup>response)
       .toPromise()
       .then((data: ResponseSingup) => {
+        return data;
+      }, (reason) => {
+        return reason;
+      });
+  }
+
+  GetTopTenUsers() {
+    return this.http.get(environment.API_DEV_URL + '/user/ranking_user',
+      // { params: params },
+      // JSON.stringify(model),
+    )
+      .map((response: ResponseTop) => <ResponseTop>response)
+      .toPromise()
+      .then((data: ResponseTop) => {
         return data;
       }, (reason) => {
         return reason;
