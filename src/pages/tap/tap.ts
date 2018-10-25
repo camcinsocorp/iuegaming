@@ -18,7 +18,9 @@ export class TapPage {
   Minute:number;
   Seconds:number;
   Paused: boolean;
+  Disable: boolean;
   Click: number;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) 
   {
@@ -35,11 +37,11 @@ export class TapPage {
   private tick(): void{
     if(--this.Seconds<0){
         this.Seconds=59;
+        if(this.Seconds=0){
+          this.Paused = !this.Paused;
+        }
       }
-    }
-
-    togglePause(): void{
-
+      
     }
 
     Clicks(){
