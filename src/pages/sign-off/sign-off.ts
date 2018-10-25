@@ -14,10 +14,10 @@ import { InicioPage } from '../inicio/inicio';
 
 @IonicPage()
 @Component({
-  selector: 'page-sing-off',
-  templateUrl: 'sing-off.html',
+  selector: 'page-sign-off',
+  templateUrl: 'sign-off.html',
 })
-export class SingOffPage {
+export class SignOffPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController) {
   }
@@ -38,6 +38,7 @@ export class SingOffPage {
     let actionSheet = this.actionSheetCtrl.create({
       title: 'Cerrar sesión',
       subTitle: '¿Realmente desea cerrar sesión?',
+      cssClass: 'action-sheets-groups-page',
       buttons: [
         {
           text: 'CANCEL',

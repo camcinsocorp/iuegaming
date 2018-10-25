@@ -4,7 +4,6 @@ page-welcome {
                 margin-bottom: 20%;
                 padding: 0px !important;
         }
-
         .content{
                 padding: 0px !important;
         }
@@ -16,5 +15,6 @@ page-welcome {
         .title-text{
                 font-size: 18px;
                 margin-bottom: 10%;
+                color: var($colors, primary);
         }
 }

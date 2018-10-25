@@ -8,6 +8,9 @@ import { StartPage } from '../start/start';
 import { UserServicesProvider } from '../../providers/services/user-services/user-services';
 import { Login } from '../../models/login';
 import { GlobalProvider } from '../../providers/global/global';
+import { SignupPage } from '../signup/signup';
+import { RecoverPage } from '../recover/recover';
+
 
 @IonicPage()
 @Component({
@@ -44,22 +47,27 @@ export class LoginPage {
 
   }
 
-  Recover() {
-    this.navCtrl.push('RecoverPage');
+  recover() {
+    this.navCtrl.push(RecoverPage);
   }
 
-  Inicio() {
-    this.navCtrl.setRoot('InicioPage');
-    // Attempt to login in through our User service
+  createAccount() {
+    this.navCtrl.push(SignupPage);
   }
+
   doLogin() {
+
+    this.navCtrl.push(StartPage);
+
     if (this.userLogin.email == undefined || this.userLogin.password == undefined || this.userLogin.email == "" || this.userLogin.password == "") {
       let toast = this.toastCtrl.create({
         message: 'Campos incorrectos.',
         duration: 3000,
         position: 'top'
       });
+
       toast.present();
+
     } else {
       this.userServicesProvider.Login(this.userLogin)
         .then(data => {
@@ -69,27 +77,10 @@ export class LoginPage {
             this.global.userName = data.name;
             this.global.userGender = data.gender;
             this.global.userLevelsCompleted = data.levelsCompleted;
-            console.log(this.global.userEmail + " " + this.global.userToken + " " + this.global.userName + " " + this.global.userGender + " " );
+            console.log(this.global.userEmail + " " + this.global.userToken + " " + this.global.userName + " " + this.global.userGender + " ");
             this.navCtrl.push(StartPage);
           }
         })
     }
-
-
-    //   this.user.login(this.account).subscribe((resp) => {
-    //     this.navCtrl.push(StartPage);
-    //   }, (err) => {
-    //     this.navCtrl.push(StartPage);
-    //     // Unable to log in
-    //     let toast = this.toastCtrl.create({
-    //       message: this.loginErrorString,
-    //       duration: 3000,
-    //       position: 'top'
-    //     });
-    //     toast.present();
-    //   });
-    // }
-
-    // Attempt to login in through our User service
   }
 }

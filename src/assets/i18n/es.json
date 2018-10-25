@@ -1,47 +1,31 @@
 {
-
   "tutorial": {
     "first": {
-      "title": "",
+      "title": "Institución Universitaria de Envigado",
       "subtitle": ""
     },
     "second": {
-      "subtitle": "Bienvenidos a un ambiente de integración y aprendizaje entre todos los integrantes de la IUE"
+      "subtitle": "Bienvenidos a un ambiente de integración y aprendizaje para todos los integrantes de la IUE ..."
     },
     "third": {
       "title": "TOP 10",
-      "subtitle": "Lugar donde compartirás, competiras, recibirás recompensas y, sobre todo, aprenderas lo mas necesario para alcanzar una meta comun"
+      "subtitle": "... donde compartimos, jugamos y aprendemos sobre el proceso de ACREDITACIÓN de ALTA CALIDAD"
+    },
+    "continue": {
+      "continue-button": "CONTINUAR"
     }
   },
-
-
-
-
-
-
   "welcome": {
-    "title": "Inicia sesión o registrate para divertirte y aprender con el proceso de acreditación IUE",
+    "title": "Inicia sesión o registrate para divertirte y aprender con el proceso de ACREDITACIÓN IUE",
     "btn-login": "INICIAR SESIÓN",
     "btn-signup": "REGISTRARME"
   },
-
-  "Profile": {
-    "Name": "Nombre",
-    "Document": "Cédula",
-    "Gender": "Genero",
-    "NickName": "NickName",
-    "Email": "Correo electronico",
-    "Career": "Carrera",
-    "Birthdate": "Fecha de nacimiento"
-
-  },
-
   "signup": {
     "documentNumber": "Numero de cedula",
     "name": "Nombre",
     "email": "Correo electrónico",
     "password": "Contraseña",
-    "confipassword":"Confirmar contraseña",
+    "confipassword": "Confirmar contraseña",
     "character": {
       "gender": "Genero",
       "boy": "Masculino",
@@ -53,36 +37,39 @@
     "terms": "teminos y condiciones",
     "button": "REGISTRARME"
   },
-
-"SING_OFF": "CERRAR SESIÓN",
-"SING_OFF_ACEPT": "CERRAR SESIÓN",
-"SING_OFF_CANCEL": "CANCELAR",
-
+  "Profile": {
+    "Name": "Nombre",
+    "Document": "Cédula",
+    "Gender": "Genero",
+    "NickName": "NickName",
+    "Email": "Correo electronico",
+    "Career": "Carrera",
+    "Birthdate": "Fecha de nacimiento"
+  },
+  "SING_OFF": "CERRAR SESIÓN",
+  "SING_OFF_ACEPT": "CERRAR SESIÓN",
+  "SING_OFF_CANCEL": "CANCELAR",
   "login": {
     "title": "Iniciar sesión",
     "email": "Correo electrónico",
     "password": "Contraseña",
-    "button": "INICIAR SESIÓN"
+    "button": "INICIAR SESIÓN",
+    "remember": "Recordarme",
+    "forgot": "Olvidé la clave",
+    "account": "¿No tienes cuenta?",
+    "createAccount": "Crea una"
   },
-
-
   "start": {
     "title": "Bienvenid@",
     "daily": "ACREDITACIÓN",
-    "tap": "RETO DIARIO"
+    "tap": "RETO DIARIO",
+    "wiki": "APRENDER"
   },
-
-
-
-
-
-
-
   "NAME": "Nombre",
   "PASSWORD": "Contraseña",
   "NEW_PASSWORD": "Nueva contraseña",
   "CONFIR_NEW_PASSWORD": "Confirmar contraseña nueva",
-  "UPDATE_PASSWORD":"Actualizar contraseña",
+  "UPDATE_PASSWORD": "Actualizar contraseña",
   "EMAIL": "Numero de cedula",
   "EMAIL2": "Correo electronico",
   "LOGIN": "Iniciar sesión",
@@ -91,37 +78,27 @@
   "CUENTA": "¿No tienes cuenta?",
   "CREA": "Crea una",
   "CODE": "Código de recuperación",
-  "ACCEPT":"Listo",
+  "ACCEPT": "Listo",
   "CODE_VALID": "El codigo ingresado es valido, ahora puede restablecer tu contraseña",
-  "R_PASSWORD":"RESTABLECER CONTRASEÑA",
-
+  "R_PASSWORD": "RESTABLECER CONTRASEÑA",
   "RECOVER_PASSWORD": "Recuperar contraseña",
-
   "TAB1_TITLE": "Items",
   "TAB2_TITLE": "Buscar",
   "TAB3_TITLE": "Ajustes",
-
   "MAP_TITLE": "Mapa",
-
   "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a al Ionic Super Starter",
   "TUTORIAL_SLIDE1_DESCRIPTION": "El <b>Ionic Super Starter</b> es un starter de Ionic completo con muchas páginas preconstruidas y mejores prácticas.",
-
   "TUTORIAL_SLIDE2_TITLE": "Cómo usar el Super Starter",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Monta los varios tipos de página que quieras y quita los que no. Hemos incluido muchas estructuras de página comunes en apps móviles, como páginas de inicio de sesión y registro, pestañas, y esta página de tutorial.",
-
   "TUTORIAL_SLIDE3_TITLE": "Empezando",
   "TUTORIAL_SLIDE3_DESCRIPTION": "¿Necesitas ayuda? Échale un vistazo al README del Super Starter para ver el tutorial completo.",
-
   "SETTINGS_TITLE": "Ajustes",
   "SETTINGS_OPTION1": "Opción 1",
   "SETTINGS_OPTION2": "Opción 2",
   "SETTINGS_OPTION3": "Opción 3",
   "SETTINGS_OPTION4": "Opción 4",
-
   "SETTINGS_PAGE_PROFILE": "Editar Perfil",
-
   "WELCOME_TITLE": "Bienvenido/a",
-
   "LOGIN_TITLE": "Iniciar sesión",
   "LOGIN_ERROR": "No se ha podido iniciar sesión. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
   "LOGIN_BUTTON": "Iniciar sesión",
@@ -129,16 +106,10 @@
   "SIGNUP_ERROR": "No se ha podido crear la cuenta. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
   "SIGNUP_BUTTON": "Registrarse",
   "RECOVER_BUTTON": "Recuperar contraseña",
-
   "LIST_MASTER_TITLE": "Items",
-
   "ITEM_CREATE_TITLE": "Nuevo Item",
   "ITEM_CREATE_CHOOSE_IMAGE": "Añadir Imagen",
-
   "CARDS_TITLE": "Social",
-
   "SEARCH_TITLE": "Buscar",
-
   "PROFILE_ERROR": "ERROR"
-
 }

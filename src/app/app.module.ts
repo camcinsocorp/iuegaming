@@ -27,8 +27,8 @@ import { TopTenPageModule } from '../pages/top-ten/top-ten.module';
 import { TopTenPage } from '../pages/top-ten/top-ten';
 import { ConfigurationsPageModule } from '../pages/configurations/configurations.module';
 import { ConfigurationsPage } from '../pages/configurations/configurations';
-import { SingOffPageModule } from '../pages/sing-off/sing-off.module';
-import { SingOffPage } from '../pages/sing-off/sing-off';
+import { SignOffPageModule } from '../pages/sign-off/sign-off.module';
+import { SignOffPage } from '../pages/sign-off/sign-off';
 import { WelcomePage } from '../pages/welcome/welcome';
 
 
@@ -41,6 +41,9 @@ import { LoginPageModule } from '../pages/login/login.module';
 import { StartDailyPage } from '../pages/start-daily/start-daily';
 import { TapPage } from '../pages/tap/tap';
 import { TapPageModule } from '../pages/tap/tap.module';
+import { SignupPage } from '../pages/signup/signup';
+import { SignupPageModule } from '../pages/signup/signup.module';
+import { StartPageModule } from '../pages/start/start.module';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -76,11 +79,12 @@ export function provideSettings(storage: Storage) {
     ProfilePageModule,
     TopTenPageModule,
     ConfigurationsPageModule,
-    SingOffPageModule,
+    SignOffPageModule,
     LoginPageModule,
     TapPageModule,
     QuestionsPageModule,
     StartDailyPageModule,
+    SignupPageModule,
     
     TranslateModule.forRoot({
       loader: {
@@ -101,12 +105,13 @@ export function provideSettings(storage: Storage) {
     ProfilePage,
     TopTenPage,
     ConfigurationsPage,
-    SingOffPage,
+    SignOffPage,
     LoginPage,
     StartPage,
     QuestionsPage,
     TapPage,
-    StartDailyPage
+    StartDailyPage,
+    SignupPage
   ],
   providers: [
     Api,
