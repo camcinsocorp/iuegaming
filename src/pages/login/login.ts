@@ -57,7 +57,7 @@ export class LoginPage {
 
   doLogin() {
 
-    this.navCtrl.push(StartPage);
+    // this.navCtrl.push(StartPage);
 
     if (this.userLogin.email == undefined || this.userLogin.password == undefined || this.userLogin.email == "" || this.userLogin.password == "") {
       let toast = this.toastCtrl.create({
@@ -71,7 +71,7 @@ export class LoginPage {
     } else {
       this.userServicesProvider.Login(this.userLogin)
         .then(data => {
-          if (data) {
+          if (data.message == 'Auth Successful') {
             this.global.userEmail = this.userLogin.email;
             this.global.userToken = data.token;
             this.global.userName = data.name;

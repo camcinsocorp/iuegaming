@@ -44,6 +44,7 @@ import { TapPageModule } from '../pages/tap/tap.module';
 import { SignupPage } from '../pages/signup/signup';
 import { SignupPageModule } from '../pages/signup/signup.module';
 import { StartPageModule } from '../pages/start/start.module';
+import { GameServicesProvider } from '../providers/services/game-services.ts/game-services';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -123,6 +124,7 @@ export function provideSettings(storage: Storage) {
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     UserServicesProvider,
+    GameServicesProvider,
     GlobalProvider
   ]
 })

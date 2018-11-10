@@ -9,6 +9,7 @@ export class GlobalProvider {
     public userName: string;
     public userGender: string;
     public userLevelsCompleted: string;
+    public ToLevel: string;
 
     constructor(public http: HttpClient) { }
 

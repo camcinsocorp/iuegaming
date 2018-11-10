@@ -21,10 +21,10 @@
 <ion-content padding>
 
   <ion-grid>
-    <ion-row>
+    <ion-row *ngFor="let topTenItems of TopTenList; let top=index">
       <ion-col col-2>
         <ion-item>
-          <ion-label>1</ion-label>
+          <ion-label>{{ top+1 }}</ion-label>
         </ion-item>
       </ion-col>
       <ion-col col-6>
@@ -32,12 +32,12 @@
           <ion-avatar item-start>
               <img src="assets/img/advance-card-tmntr.jpg">
           </ion-avatar>
-          <h2>Peter Arias</h2>
+          <h2>{{ topTenItems.nickname }}</h2>
         </ion-item>
       </ion-col>
       <ion-col col-4>
         <ion-item>
-        <ion-label>987.236</ion-label>
+        <ion-label>{{ topTenItems.score }}</ion-label>
       </ion-item>
       </ion-col>
     </ion-row>
