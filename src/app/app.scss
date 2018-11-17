@@ -14,3 +14,51 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+
+
+//WELCOME
+.title-text{
+    font-family: Roboto;
+    font-size: 30px;
+    text-align: center;
+}
+.img-fondoPNG-menu{
+    width: 100%;
+    padding: 0px !important;
+}
+
+.header-padding-img{
+    padding: 0px !important;
+    height: 0px;
+}
+
+.img-Contenedor{
+    position: relative;
+    display: inline-block;
+}
+
+.img-texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+}
+
+.img-texto-centrado{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    margin-top: 12%;
+    color: white;
+}
+
+.circle-pic{
+    width:60px;
+    height:60px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: 20%;
+}

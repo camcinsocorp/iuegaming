@@ -1,44 +1,85 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content>
-  <form (submit)="doSignup()">
-    <ion-list>
-
-      <ion-item>
-        <ion-label fixed>{{ 'NAME' | translate }}</ion-label>
-        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
-      </ion-item>
-
-      <!--
-      Want to add a Username? Here you go:
-
-      <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-      -->
-
-      <ion-item>
-        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
-      </ion-item>
-
-      <div padding>
-        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
-      </div>
-
-    </ion-list>
-  </form>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-item>
+          <ion-label floating>{{ 'signup.documentNumber' | translate }}</ion-label>
+          <ion-input type="number" [(ngModel)]="userSignup.identification" name="identification"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-item>
+          <ion-label floating>{{ 'signup.name' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="userSignup.name" name="name"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-item>
+          <ion-label floating>{{ 'signup.character.gender' | translate }}</ion-label>
+          <ion-select [(ngModel)]="userSignup.gender">
+            <ion-option value="1">{{ 'signup.character.boy' | translate }}</ion-option>
+            <ion-option value="2">{{ 'signup.character.girl' | translate }}</ion-option>
+            <ion-option value="3">{{ 'signup.character.other' | translate }}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-item>
+          <ion-label floating>{{ 'signup.Nickname' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="userSignup.nickname" name="nickname"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-item>
+          <ion-label floating>{{ 'signup.email' | translate }}</ion-label>
+          <ion-input type="email" [(ngModel)]="userSignup.email" name="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-item>
+          <ion-label floating>{{ 'signup.password' | translate }}</ion-label>
+          <ion-input type="password" [(ngModel)]="userSignup.password" name="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-item>
+          <ion-label floating>{{ 'signup.confipassword' | translate }}</ion-label>
+          <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-item no-lines>
+          <ion-checkbox></ion-checkbox>
+          <ion-label text-wrap>{{ 'signup.I_Agree' | translate }} <a>{{ 'signup.terms' | translate }}</a></ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <div padding>
+          <button ion-button color="primary" block (click)="doSignup()">{{ 'SIGNUP_BUTTON' | translate }}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

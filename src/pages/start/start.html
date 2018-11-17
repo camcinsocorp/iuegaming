@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{ 'start.title' | translate }} {{ userName }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="doClick()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button class="start-button-content">{{ 'start.wiki' | translate }}</button>
+      </ion-col>
+      <ion-col col-12>
+        <button ion-button color="primary" block class="start-button-content" (click)="goStartDayli()">{{ 'start.daily'
+          | translate }}</button>
+      </ion-col>
+      <ion-col col-12>
+        <button ion-button color="primary" block class="start-button-content" (click)="goTap()">{{ 'start.tap' |
+          translate }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
