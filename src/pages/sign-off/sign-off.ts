@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, Button } from 'ionic-angular';
 import { ActionSheetController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { InicioPage } from '../inicio/inicio';
+import { StartPage } from '../start/start';
 
 
 /**
@@ -31,7 +32,7 @@ export class SignOffPage {
   }
 
   IRINICIO(){
-    this.navCtrl.setRoot(InicioPage);
+    this.navCtrl.setRoot(StartPage);
   }
 
   Confirmar(){

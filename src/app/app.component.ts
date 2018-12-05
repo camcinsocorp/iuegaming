@@ -11,6 +11,7 @@ import { RecoverPage } from '../pages/recover/recover';
 import { InicioPage } from '../pages/inicio/inicio';
 import { MenuPage } from '../pages/menu/menu';
 import { templateSourceUrl } from '@angular/compiler';
+import { ConfigurationsPage } from '../pages/configurations/configurations';
 
 export interface PageInterface {
   title: string;
@@ -53,7 +54,7 @@ export interface PageInterface {
 
 })
 export class MyApp {
-  rootPage = FirstRunPage; //FirstRunPage
+  rootPage = ConfigurationsPage; //FirstRunPage
 
   @ViewChild(Nav) nav: Nav;
 
