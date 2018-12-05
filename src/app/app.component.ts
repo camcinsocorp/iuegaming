@@ -11,6 +11,7 @@ import { RecoverPage } from '../pages/recover/recover';
 import { InicioPage } from '../pages/inicio/inicio';
 import { MenuPage } from '../pages/menu/menu';
 import { templateSourceUrl } from '@angular/compiler';
+import { ConfigurationsPage } from '../pages/configurations/configurations';
 
 export interface PageInterface {
   title: string;
@@ -53,7 +54,7 @@ export interface PageInterface {
 
 })
 export class MyApp {
-  rootPage = FirstRunPage; //FirstRunPage
+  rootPage = ConfigurationsPage; //FirstRunPage
 
   @ViewChild(Nav) nav: Nav;
 
@@ -62,7 +63,7 @@ export class MyApp {
     { title: 'Perfil', component: 'ProfilePage', icon: 'person' },
     { title: 'Top 10', component: 'TopTenPage', icon: 'list-box' },
     { title: 'Configuración', component: 'ConfigurationsPage', icon: 'settings' },
-    { title: 'Cerrar sesión', component: 'SingOffPage', icon: 'exit' },
+    { title: 'Cerrar sesión', component: 'SignOffPage', icon: 'exit' },
     //{ title: 'Login', component: 'LoginPage' },
     //{ title: 'Signup', component: 'SignupPage' },
     //{ title: 'Master Detail', component: 'ListMasterPage' },

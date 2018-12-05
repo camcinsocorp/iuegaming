@@ -27,8 +27,8 @@ import { TopTenPageModule } from '../pages/top-ten/top-ten.module';
 import { TopTenPage } from '../pages/top-ten/top-ten';
 import { ConfigurationsPageModule } from '../pages/configurations/configurations.module';
 import { ConfigurationsPage } from '../pages/configurations/configurations';
-import { SingOffPageModule } from '../pages/sing-off/sing-off.module';
-import { SingOffPage } from '../pages/sing-off/sing-off';
+import { SignOffPageModule } from '../pages/sign-off/sign-off.module';
+import { SignOffPage } from '../pages/sign-off/sign-off';
 import { WelcomePage } from '../pages/welcome/welcome';
 
 
@@ -68,8 +68,7 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp,
-    StartPage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -79,8 +78,9 @@ export function provideSettings(storage: Storage) {
     MenuPageModule,
     ProfilePageModule,
     TopTenPageModule,
+    StartPageModule,
     ConfigurationsPageModule,
-    SingOffPageModule,
+    SignOffPageModule,
     LoginPageModule,
     TapPageModule,
     QuestionsPageModule,
@@ -106,7 +106,7 @@ export function provideSettings(storage: Storage) {
     ProfilePage,
     TopTenPage,
     ConfigurationsPage,
-    SingOffPage,
+    SignOffPage,
     LoginPage,
     StartPage,
     QuestionsPage,

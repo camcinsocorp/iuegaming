@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { TranslateModule } from '@ngx-translate/core';
-import { SingOffPage } from './sing-off';
+import { SignOffPage } from './sign-off';
 
 @NgModule({
   declarations: [
-    SingOffPage,
+    SignOffPage,
   ],
   imports: [
-    IonicPageModule.forChild(SingOffPage),
+    IonicPageModule.forChild(SignOffPage),
     TranslateModule.forChild()
   ],
 })
-export class SingOffPageModule {}
+export class SignOffPageModule {}
