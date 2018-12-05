@@ -67,8 +67,7 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp,
-    StartPage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -78,6 +77,7 @@ export function provideSettings(storage: Storage) {
     MenuPageModule,
     ProfilePageModule,
     TopTenPageModule,
+    StartPageModule,
     ConfigurationsPageModule,
     SignOffPageModule,
     LoginPageModule,
