@@ -23,7 +23,7 @@
               <div class="r-label-content">
                 <ion-item>
                   <ion-label floating>{{ 'EMAIL2' | translate }}</ion-label>
-                  <ion-input type="email" name="email"></ion-input>
+                  <ion-input type="email" name="email" [(ngModel)]="forgotPassword.email"></ion-input>
                 </ion-item>
               </div>
             </ion-col>
@@ -31,9 +31,9 @@
           <ion-row>
             <ion-col col-12>
               <div class="r-content-button">
-                <button ion-button color="primary" block (click)="Aceptar()">{{ 'RECOVER_BUTTON' | translate }}</button>
+                <button ion-button color="primary" block (click)="ForgotPassword()">{{ 'RECOVER_BUTTON' | translate }}</button>
               </div>
-            </ion-col> 
+            </ion-col>
           </ion-row>
         </ion-grid>
       </ion-list>
@@ -49,16 +49,15 @@
               <div class="r-label-content">
                 <ion-item>
                   <ion-label floating>{{ 'CODE' | translate }}</ion-label>
-                  <ion-input type="number" name="number"></ion-input>
+                  <ion-input type="text" name="reset_password_token" [(ngModel)]="recoverPassword.reset_password_token"></ion-input>
                 </ion-item>
               </div>
-
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col col-12>
               <div class="r-content-button">
-                <button ion-button color="primary" block (click)="Listo()">{{ 'ACCEPT' | translate }}</button>
+                <button ion-button color="primary" block (click)="ConfirmToken()">{{ 'ACCEPT' | translate }}</button>
               </div>
             </ion-col>
           </ion-row>
@@ -105,7 +104,7 @@
               <div class="r-label-content">
                 <ion-item>
                   <ion-label floating>{{ 'NEW_PASSWORD' | translate }}</ion-label>
-                  <ion-input type="password" name="password"></ion-input>
+                  <ion-input type="password" name="newPassword" [(ngModel)]="recoverPassword.newPassword"></ion-input>
                 </ion-item>
               </div>
             </ion-col>
@@ -115,7 +114,7 @@
               <div>
                 <ion-item>
                   <ion-label floating>{{ 'CONFIR_NEW_PASSWORD' | translate }}</ion-label>
-                  <ion-input type="password" name="password"></ion-input>
+                  <ion-input type="password" name="verifyPassword" [(ngModel)]="recoverPassword.verifyPassword"></ion-input>
                 </ion-item>
               </div>
             </ion-col>
@@ -123,7 +122,7 @@
           <ion-row>
             <ion-col col-12>
               <div class="r-content-button">
-                <button ion-button color="primary" block (click)="PageInicio()">{{ 'UPDATE_PASSWORD' | translate }}</button>
+                <button ion-button color="primary" block (click)="ResetPassword()">{{ 'UPDATE_PASSWORD' | translate }}</button>
               </div>
             </ion-col>
           </ion-row>

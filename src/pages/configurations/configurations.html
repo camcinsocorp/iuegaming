@@ -1,18 +1,70 @@
-<!--
-  Generated template for the ConfigurationsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Configurations</ion-title>
-  </ion-navbar>
-
+    <ion-toolbar>
+      <button ion-button menuToggle left>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        
+      </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <div>
+        <ion-label>{{ 'settings.user_configuration' | translate }}</ion-label>
+      </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="div-two-content">        
+                 <h4>{{ 'settings.language' | translate }}</h4>
+                <label>{{ 'settings.selected_language' | translate }}</label>
+                <br>
+                <a>{{ 'settings.change_language' | translate }}</a>
+        </div>
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+        <ion-col col-12>
+          <div class="div-content">        
+                   <h4>{{ 'settings.password' | translate }}</h4>
+                  <a>{{ 'settings.New_password' | translate }}</a>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <hr>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <div>
+            <label>{{ 'settings.general_configuration' | translate }}</label>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <div class="col-content">
+      <ion-row>
+          <ion-col col-2>
+                  <ion-checkbox></ion-checkbox>
+            </ion-col>
+        <ion-col col-10>
+              <h4>{{ 'settings.notifications' | translate }}</h4>
+              <p>{{ 'settings.message' | translate }}</p>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+  </ion-grid>
 </ion-content>

@@ -3,8 +3,6 @@
     <ion-title>{{ 'login.title' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
-
-
 <ion-content>
   <div class="div-content">
     <form>
@@ -12,27 +10,23 @@
         <ion-grid>
           <ion-row>
             <ion-col col-12>
+              <img class="login-head-img" src="assets/img/accreditation/images/accreditation-logo.png">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
               <div>
-                <ion-item>
-                  <ion-label floating>{{ 'EMAIL' | translate }}</ion-label>
+                <ion-item no-lines>
+                  <ion-label floating>{{ 'login.email' | translate }}</ion-label>
                   <ion-input type="email" [(ngModel)]="userLogin.email" name="email"></ion-input>
                 </ion-item>
               </div>
             </ion-col>
           </ion-row>
-
-          <!--
-      Want to use a Username instead of an Email? Here you go:
-
-      <ion-item>
-        <ion-label floating>{{ 'USERNAME' | translate }}</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-      -->
           <ion-row>
             <ion-col col-12>
-              <ion-item>
-                <ion-label floating>{{ 'PASSWORD' | translate }}</ion-label>
+              <ion-item no-lines>
+                <ion-label floating>{{ 'login.password' | translate }}</ion-label>
                 <ion-input type="password" [(ngModel)]="userLogin.password" name="password"></ion-input>
               </ion-item>
             </ion-col>
@@ -41,8 +35,8 @@
           <ion-row>
             <ion-col col-7>
               <div>
-                <ion-item>
-                  <ion-label text-wrap>{{ 'RECORDAR' | translate }}</ion-label>
+                <ion-item no-lines>
+                  <ion-label text-wrap>{{ 'login.remember' | translate }}</ion-label>
                   <ion-checkbox></ion-checkbox>
                 </ion-item>
               </div>
@@ -50,8 +44,8 @@
 
             <ion-col col-5>
               <div>
-                <ion-item class="lg-label">
-                  <a (click)="Recover()">Olvide mi clave</a>
+                <ion-item class="lg-label" no-lines text-wrap>
+                  <ion-label text-wrap (click)="recover()" color="primary">{{ 'login.forgot' | translate }}</ion-label>
                 </ion-item>
               </div>
             </ion-col>
@@ -67,7 +61,8 @@
           <ion-row>
             <ion-col col-12>
               <div>
-                <ion-label class="centrar">{{ 'CUENTA' | translate }} <a>{{ 'CREA' | translate }}</a></ion-label>
+                <ion-label class="login-account-message">{{ 'login.account' | translate }} <a (click)="createAccount()">{{
+                    'login.createAccount' | translate }}</a></ion-label>
               </div>
             </ion-col>
           </ion-row>

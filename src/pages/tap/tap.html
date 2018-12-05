@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+      <button ion-button menuToggle left>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        {{ 'start.title' | translate }} {{ userName }}
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        
+        <img src="assets/img/Hector.gif">
+      
+      </ion-col>
+      <ion-col col-6>
+       <div class="tab-content-timer">
+        <h3>Tiempo :{{ Seconds }}</h3>
+        <p>Numero de clicks:</p>
+        <p>Puntos: {{ Click }}</p>
+        
+      </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <div>
+        <button ion-button block color="secondary" (click)="Clicks()" class="tap-content-button">Vamos !!!!</button>
+      </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

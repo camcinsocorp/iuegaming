@@ -1,3 +1,6 @@
+import { QuestionsPageModule } from './../pages/questions/questions.module';
+import { QuestionsPage } from './../pages/questions/questions';
+import { StartDailyPageModule } from './../pages/start-daily/start-daily.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,15 +27,24 @@ import { TopTenPageModule } from '../pages/top-ten/top-ten.module';
 import { TopTenPage } from '../pages/top-ten/top-ten';
 import { ConfigurationsPageModule } from '../pages/configurations/configurations.module';
 import { ConfigurationsPage } from '../pages/configurations/configurations';
-import { SingOffPageModule } from '../pages/sing-off/sing-off.module';
-import { SingOffPage } from '../pages/sing-off/sing-off';
+import { SignOffPageModule } from '../pages/sign-off/sign-off.module';
+import { SignOffPage } from '../pages/sign-off/sign-off';
 import { WelcomePage } from '../pages/welcome/welcome';
+
 
 import { StartPage } from '../pages/start/start';
 import { UserServicesProvider } from '../providers/services/user-services/user-services';
 import { GlobalProvider } from '../providers/global/global';
 import { LoginPage } from '../pages/login/login';
 import { LoginPageModule } from '../pages/login/login.module';
+
+import { StartDailyPage } from '../pages/start-daily/start-daily';
+import { TapPage } from '../pages/tap/tap';
+import { TapPageModule } from '../pages/tap/tap.module';
+import { SignupPage } from '../pages/signup/signup';
+import { SignupPageModule } from '../pages/signup/signup.module';
+import { StartPageModule } from '../pages/start/start.module';
+import { GameServicesProvider } from '../providers/services/game-services.ts/game-services';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -56,8 +68,7 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp,
-    StartPage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -67,9 +78,15 @@ export function provideSettings(storage: Storage) {
     MenuPageModule,
     ProfilePageModule,
     TopTenPageModule,
+    StartPageModule,
     ConfigurationsPageModule,
-    SingOffPageModule,
+    SignOffPageModule,
     LoginPageModule,
+    TapPageModule,
+    QuestionsPageModule,
+    StartDailyPageModule,
+    SignupPageModule,
+    
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -89,9 +106,13 @@ export function provideSettings(storage: Storage) {
     ProfilePage,
     TopTenPage,
     ConfigurationsPage,
-    SingOffPage,
+    SignOffPage,
+    LoginPage,
     StartPage,
-    LoginPage
+    QuestionsPage,
+    TapPage,
+    StartDailyPage,
+    SignupPage
   ],
   providers: [
     Api,
@@ -103,6 +124,7 @@ export function provideSettings(storage: Storage) {
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     UserServicesProvider,
+    GameServicesProvider,
     GlobalProvider
   ]
 })

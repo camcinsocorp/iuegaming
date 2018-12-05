@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { UserServicesProvider } from '../../providers/services/user-services/user-services';
 
 /**
  * Generated class for the TopTenPage page.
@@ -15,11 +16,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TopTenPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  TopTenList: any;
+  CountUsers: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public userServicesProvider: UserServicesProvider,
+    public toastCtrl: ToastController) {
+    this.getTopTen();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TopTenPage');
+  }
+
+  getTopTen() {
+    this.userServicesProvider.GetTopTenUsers()
+      .then(data => {
+        this.TopTenList = data.top
+        this.CountUsers = data.count
+      });
   }
 
 }

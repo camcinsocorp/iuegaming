@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { ConfigurationsPage } from './configurations';
 import { TranslateModule } from '@ngx-translate/core';
+import { SignOffPage } from './sign-off';
 
 @NgModule({
   declarations: [
-    ConfigurationsPage,
+    SignOffPage,
   ],
   imports: [
-    IonicPageModule.forChild(ConfigurationsPage),
-     TranslateModule.forChild()
+    IonicPageModule.forChild(SignOffPage),
+    TranslateModule.forChild()
   ],
 })
-export class ConfigurationsPageModule {}
+export class SignOffPageModule {}

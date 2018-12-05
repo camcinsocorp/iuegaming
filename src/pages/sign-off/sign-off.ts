@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, Button } from 'ionic-angular';
 import { ActionSheetController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { InicioPage } from '../inicio/inicio';
+import { StartPage } from '../start/start';
 
 
 /**
@@ -14,10 +15,10 @@ import { InicioPage } from '../inicio/inicio';
 
 @IonicPage()
 @Component({
-  selector: 'page-sing-off',
-  templateUrl: 'sing-off.html',
+  selector: 'page-sign-off',
+  templateUrl: 'sign-off.html',
 })
-export class SingOffPage {
+export class SignOffPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController) {
   }
@@ -31,13 +32,14 @@ export class SingOffPage {
   }
 
   IRINICIO(){
-    this.navCtrl.setRoot(InicioPage);
+    this.navCtrl.setRoot(StartPage);
   }
 
   Confirmar(){
     let actionSheet = this.actionSheetCtrl.create({
       title: 'Cerrar sesión',
       subTitle: '¿Realmente desea cerrar sesión?',
+      cssClass: 'action-sheets-groups-page',
       buttons: [
         {
           text: 'CANCEL',
