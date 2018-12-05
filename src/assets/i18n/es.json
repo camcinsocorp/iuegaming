@@ -46,6 +46,17 @@
     "Career": "Carrera",
     "Birthdate": "Fecha de nacimiento"
   },
+  "settings":{
+    "user_configuration": "Configuración del usuario",
+    "language": "Idioma",
+    "selected_language": "Idioma seleccionado:",
+    "change_language": "Click para cambiar idioma",
+    "password": "Contraseña",
+    "New_password": "Click aqui para establecer una nueva contraseña para la cuenta",
+    "general_configuration":"Configuración general de la aplicación",
+    "notifications": "Notifications",
+    "message":"La aplicación generará notificaciones sobre el reto diario y otros elementos"
+  },
   "SING_OFF": "CERRAR SESIÓN",
   "SING_OFF_ACEPT": "CERRAR SESIÓN",
   "SING_OFF_CANCEL": "CANCELAR",
