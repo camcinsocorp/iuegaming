@@ -83,4 +83,25 @@ export class LoginPage {
         })
     }
   }
+
+  doLoginDis() {
+
+    // this.navCtrl.push(StartPage);
+
+    if (this.userLogin.email == undefined || this.userLogin.password == undefined || this.userLogin.email == "" || this.userLogin.password == "") {
+      let toast = this.toastCtrl.create({
+        message: 'Campos incorrectos.',
+        duration: 3000,
+        position: 'top'
+      });
+
+      toast.present();
+
+    } else {
+      if (this.userLogin.email == this.global.SUemail && this.userLogin.password == this.global.SUpassword) {
+        this.global.Lemail = this.userLogin.email;
+        this.navCtrl.push(StartPage);
+      }
+    }
+  }
 }
