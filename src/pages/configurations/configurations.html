@@ -25,7 +25,7 @@
                  <h4>{{ 'settings.language' | translate }}</h4>
                 <label>{{ 'settings.selected_language' | translate }}</label>
                 <br>
-                <a>{{ 'settings.change_language' | translate }}</a>
+                <a (click)="showIdioma()">{{ 'settings.change_language' | translate }}</a>
         </div>
       </ion-col>
     </ion-row>
@@ -34,7 +34,7 @@
         <ion-col col-12>
           <div class="div-content">        
                    <h4>{{ 'settings.password' | translate }}</h4>
-                  <a>{{ 'settings.New_password' | translate }}</a>
+                  <a (click)="ChangePassword()">{{ 'settings.New_password' | translate }}</a>
           </div>
         </ion-col>
       </ion-row>
