@@ -23,7 +23,7 @@
             <div>
               <ion-item>
                 <ion-label floating>{{ 'Profile.Name'| translate }}</ion-label>
-                <ion-input type="text" value="Andres Gaviria Agudelo" readonly="true"></ion-input>
+                <ion-input type="text" value="{{ this.global.SUname }}" readonly="true"></ion-input>
                 <ion-icon name="create" item-right color="primary"></ion-icon>
               </ion-item>
             </div>
@@ -34,7 +34,7 @@
             <div>
               <ion-item>
                   <ion-label floating>{{ 'Profile.Document'| translate }}</ion-label>
-                  <ion-input type="number" readonly="true" value="999899989998"></ion-input>
+                  <ion-input type="number" readonly="true" value="{{ this.global.SUidentification }}"></ion-input>
               </ion-item>
             </div>
           </ion-col>
@@ -43,17 +43,13 @@
           <ion-col col-6>
             <ion-item>
                 <ion-label floating>{{ 'Profile.Gender'| translate }}</ion-label>
-                <ion-select>
-                    <ion-option value="Maculino">Maculino</ion-option>
-                    <ion-option value="Femenimo">Femenino</ion-option>
-                    <ion-option value="Otro">Otro</ion-option>
-                </ion-select>
+                <ion-input type="text" value="{{ this.global.SUgender }}"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col col-6>
             <ion-item>
               <ion-label floating>{{ 'Profile.NickName'| translate }}</ion-label>
-              <ion-input type="text" value="El pana"></ion-input>
+              <ion-input type="text" value="{{ this.global.SUnickname }}"></ion-input>
               <ion-icon name="create" item-right color="primary"></ion-icon>
             </ion-item>
           </ion-col>
@@ -63,7 +59,7 @@
             <ion-item>
               
                 <ion-label floating>{{ 'Profile.Email'| translate }}</ion-label>
-                <ion-input type="email" value="agaviriao@correo.iue.edu.co"></ion-input>
+                <ion-input type="email" value="{{ this.global.SUemail }}"></ion-input>
                 <ion-icon name="create" item-right color="primary"></ion-icon>
             </ion-item>
           </ion-col>

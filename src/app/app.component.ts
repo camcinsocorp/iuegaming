@@ -12,6 +12,7 @@ import { InicioPage } from '../pages/inicio/inicio';
 import { MenuPage } from '../pages/menu/menu';
 import { templateSourceUrl } from '@angular/compiler';
 import { ConfigurationsPage } from '../pages/configurations/configurations';
+import { GlobalProvider } from '../providers/global/global';
 
 export interface PageInterface {
   title: string;
@@ -31,8 +32,8 @@ export interface PageInterface {
                 </ion-avatar>
             </div>
             <div class="img-texto-centrado">
-                <ion-label>Felipe Dos Santos</ion-label>
-                <ion-label>fepeDos</ion-label>
+                <ion-label>{{ this.global.SUname }}</ion-label>
+                <ion-label>{{ this.global.SUnickname }}</ion-label>
             </div>
         </div>
     </ion-header>
@@ -72,7 +73,8 @@ export class MyApp {
     //{ title: 'Search', component: 'SearchPage' }
   ]
 
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, public menuCtrl: MenuController) {
+  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, public menuCtrl: MenuController,
+    public global: GlobalProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

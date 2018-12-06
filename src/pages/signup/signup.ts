@@ -135,6 +135,7 @@ export class SignupPage {
           this.global.SUname = this.userSignup.name;
           this.global.SUgender = this.userSignup.gender;
           this.global.SUnickname = this.userSignup.nickname;
+          this.global.SUgender = this.userSignup.gender;
 
           this.navCtrl.push(LoginPage);
       // }

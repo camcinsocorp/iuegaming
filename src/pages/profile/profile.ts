@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
+import { GlobalProvider } from '../../providers/global/global';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -15,7 +16,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public translateService: TranslateService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public translateService: TranslateService,
+    public global: GlobalProvider) {
 
     this.translateService.get('PROFILE_ERROR').subscribe((value) => {
       // this.loginErrorString = value;
