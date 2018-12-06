@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GlobalProvider } from '../../providers/global/global';
 import { GameServicesProvider } from '../../providers/services/game-services.ts/game-services';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the StartDailyPage page.
@@ -24,7 +25,7 @@ export class StartDailyPage {
   CountUsers: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public global: GlobalProvider,
-     private gameServicesProvider: GameServicesProvider) {
+    private gameServicesProvider: GameServicesProvider, private alertCtrl: AlertController) {
 
     this.getTopTen();
 
@@ -35,7 +36,8 @@ export class StartDailyPage {
   }
 
   goQuestions(level){
-    this.global.ToLevel = level;
+    // this.global.ToLevel = level;
+    // this.navCtrl.setRoot(QuestionsPage);
     this.navCtrl.setRoot(QuestionsPage);
   }
 
@@ -46,5 +48,9 @@ export class StartDailyPage {
         this.CountUsers = data.count
       });
   }
+
+
+
+  
 
 }

@@ -18,9 +18,15 @@
 
 <ion-content padding>
   <ion-grid>
-    <ion-row>
+    <!-- <ion-row>
       <ion-col col-2.4 *ngFor="let levels of GameList">
-        <button ion-button  block class="sd-button-content" (click)="goQuestions(levels.levelNumber)">{{ levels.levelNumber }}</button>
+        <button ion-button block class="sd-button-content" (click)="goQuestions(levels.levelNumber)">{{
+          levels.levelNumber }}</button>
+      </ion-col>
+    </ion-row> -->
+    <ion-row>
+      <ion-col col-2.4>
+        <button ion-button block class="sd-button-content" (click)="goQuestions()">1</button>
       </ion-col>
     </ion-row>
   </ion-grid>
