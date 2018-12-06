@@ -30,20 +30,62 @@ export class ConfigurationsPage {
       message: "Seleccione el nuevo idioma",
       inputs: [
         {
-          name: 'title',
-          placeholder: 'Title'
-        },
+          type: 'radio',
+          name: 'Español',
+          'label': 'Español',
+          value: 'Español',
+      },
+      {
+        type: 'radio',
+        name: 'Ingles',
+        'label': 'Ingles',
+        value: 'Ingles',
+      },
       ],
       buttons: [
         {
-          text: 'Cancel',
+          text: 'CANCEL',
         },
         {
-          text: 'Cambiar idioma',
+          text: 'CAMBIAR IDIOMA',
         }
       ]
     });
     prompt.present();
+  }
+
+
+  ChangePassword(){
+    const Myprompt = this.alertCtrl.create({
+      title: 'Actualizar Contraseña',
+      
+      inputs: [
+        {
+          type: 'password',
+          name: 'password',
+          placeholder: 'Contraseña actual',
+      },
+      {
+        type: 'password',
+        name: 'newpassword',
+        placeholder: 'Nueva Contraseña',
+      },
+      {
+        type: 'password',
+        name: 'ConfirmNewPassword',
+        placeholder: 'Confirmar nueva contraseña',
+      },
+      ],
+      buttons: [
+        {
+          text: 'CANCEL',
+        },
+        {
+          text: 'ACTUALIZAR',
+        }
+      ]
+    });
+    Myprompt.present();
   }
 
 }
