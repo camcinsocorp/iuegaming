@@ -11,6 +11,17 @@ export class GlobalProvider {
     public userLevelsCompleted: string;
     public ToLevel: string;
 
+    
+    public SUname: string;
+    public SUgender: string;
+    public SUemail: string;
+    public SUpassword: string;
+    public SUidentification: string;
+    public SUnickname: string;
+
+    public Lemail: string;
+
+
     constructor(public http: HttpClient) { }
 
 }

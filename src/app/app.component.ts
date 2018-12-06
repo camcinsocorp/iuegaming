@@ -54,7 +54,7 @@ export interface PageInterface {
 
 })
 export class MyApp {
-  rootPage = ConfigurationsPage; //FirstRunPage
+  rootPage = FirstRunPage; //FirstRunPage
 
   @ViewChild(Nav) nav: Nav;
 
